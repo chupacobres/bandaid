@@ -1,17 +1,8 @@
 import React from "react";
+import "./Navigation.css";
 
-function Nav() {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a className="navbar-brand" href="/">
-        BandAid
-      </a>
-    </nav>
-  );
-}
+const Navigation = props => <div className="Navigation">{props.children}</div>;
 
-
-
-export { default } from "./Navigation";
+export default Navigation;
 
 
