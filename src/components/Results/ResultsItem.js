@@ -2,12 +2,9 @@ import React, { Component } from 'react';
 import "./Results.css";
 
 class Results extends Component {
-    state = {
-        id: ' ',
-        avatar_url: ' '
-    };
+
     render() {
-       const { avatar_url} = this.state
+       const { avatar_url} = this.props.result
         return (
             <div className="card text-center" > Band Info
             <img
