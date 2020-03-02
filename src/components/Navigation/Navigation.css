@@ -1,0 +1,19 @@
+nav {
+  height: auto;
+  background-color: lightgrey;
+}
+
+img { 
+margin-left: 20px;
+margin-top: 10px;
+width: 10%;
+text-align: left;
+}
+
+/* .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar-brand>img {
+  padding: 7px 14px;
+} */
