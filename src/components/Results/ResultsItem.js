@@ -8,7 +8,7 @@ const Results = ({ avatar_url} = this.props.result) => {
                     src={avatar_url} alt="" className="imageBand" alt="imageBand Here"
                 />
                 <div>
-                    <button href="" className="btn" > More</button>
+                    <button href={'avatar_href'} className="btn" > More</button>
                 </div>
             </div>
         )

@@ -3,10 +3,10 @@
 }
 
 nav {
-  position: absolute;
+  border:1px solid lightblue;
+  margin-top: 0px;
   height: 100px;
   width: 100%;
-  /* background-color: lightgrey; */
   background-color:rgb(40, 177, 240);
 }
 

@@ -8,7 +8,7 @@ const Navigation = props => {
         return (
             <nav>
                 <div className="divLogo">
-          <img  src={require("./BANDAID.png")} />
+          <img className="logo" src={require("./BANDAID.png")} />
           </div>
           <div className="leftNav">
           <a href="#">Login | </a>
