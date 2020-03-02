@@ -7,7 +7,13 @@ class Navigation extends Component {
     render() {
         return (
             <nav>
-          <img className="logo" src={require("./BANDAID.png")} />
+                <div className="divLogo">
+          <img  src={require("./BANDAID.png")} />
+          </div>
+          <div className="leftNav">
+          <a href="#">Login | </a>
+          <a href="#">Sign Up</a>
+          </div>
             </nav>
         );
     }
