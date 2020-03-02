@@ -1,24 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./Results.css";
 
-class Results extends Component {
-
-    render() {
-       const { avatar_url} = this.props.result
+const Results = ({ avatar_url} = this.props.result) => {
         return (
-            <div className="card text-center" > Band Info
+            <div className="card" >
             <img
-                    src={avatar_url} alt="" className="image band"
+                    src={avatar_url} alt="" className="imageBand" alt="imageBand Here"
                 />
                 <div>
-                    <a href="#" className="btn bt-secondary btn-sm my-1" > More </a>
+                    <button href="" className="btn" > More</button>
                 </div>
             </div>
         )
-    }
 }
 
 
 export default Results;
-
-

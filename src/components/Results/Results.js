@@ -6,12 +6,9 @@ class Results extends Component {
         results: [
             {
                 id: '1',
-                avatar_url: ''
+                avatar_url: '',
+                avatar_href: ''
             },
-            {
-                id: '2',
-                avatar_url: ''
-            }
         ]
     }
     render() {

@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./Navigation.css";
 // import BANDAID from "./"; 
 
 
-class Navigation extends Component {
-    render() {
+const Navigation = props => {
+
         return (
             <nav>
                 <div className="divLogo">
@@ -16,6 +16,5 @@ class Navigation extends Component {
           </div>
             </nav>
         );
-    }
 }
 export default Navigation;
