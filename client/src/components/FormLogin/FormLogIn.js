@@ -1,9 +1,7 @@
-import React, {Component} from "react";
+import React, {Component} from "./node_modules/react";
 import "./FormLogIn.css";
 
-
-
-class FormLogin extends Component {
+class FormLogIn extends Component {
     // Setting the component's initial state
     state = {
       firstName: "",
