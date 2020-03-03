@@ -1,0 +1,33 @@
+.divMap {
+    width: 80%;
+    margin: 0px auto;
+    height: 80%;
+    border: 3px solid green;
+    background-color: lightskyblue;
+    /* background-color:  rgb(194, 87, 26); */
+}
+
+.card {
+    border: 1px solid green;
+    margin: 100px auto 20px;
+    height: 100px;
+    text-align: center;
+    width: 80%;
+    display: block;
+;
+}
+
+.imageBand {
+    width: 100%;
+    margin-left: 0px;
+    height: 20px;
+}
+
+button {
+    width: 60px;
+    height: 20px;
+    margin-top: 40px;
+    /* text-align: center; */
+    color: black;
+    background-color: yellow;
+}
