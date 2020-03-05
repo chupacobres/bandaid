@@ -4,16 +4,19 @@ import homeImg from '../../assets/homeImg.png'
 // import './Image.css'
 
 
-function Search () {
-        return (
-            <div>
-                <form className="form">
-                    <input className="searchInput" type="text" name="text" placeholder="Search bands..."></input>
-                    <input type="submit" value="search" className="searchBar"></input>
-                </form>
-            </div>
-        )
-    }
+function Search() {
+    return (
+        <div>
+        <div className="container">
+            <div className="whiteSpace"></div>
+            <form className="form">
+                <input className="searchInput" type="text" name="text" placeholder="Search bands..."></input>
+                <input type="submit" value="search" className="searchButton"></input>
+            </form>
+        </div>
+        </div>
+    )
+}
 
 export default Search
 
