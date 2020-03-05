@@ -1,21 +1,51 @@
 import React, { Component } from 'react'
 import './Search.css'
-import homeImg from '../../assets/homeImg.png'
-// import './Image.css'
 
+class Search extends Component {
+    state = {
+        text: ""
+    }
 
-function Search() {
-    return (
-        <div>
-        <div className="container">
-            <div className="whiteSpace"></div>
-            <form className="form">
-                <input className="searchInput" type="text" name="text" placeholder="Search bands..."></input>
-                <input type="submit" value="search" className="searchButton"></input>
-            </form>
-        </div>
-        </div>
-    )
+    onChange = e => {
+        console.log("function1")
+        this.setState({ [e.target.name]: e.target.value });
+    }
+
+    onSubmit = e => {
+        console.log(this.state.text)
+        this.setState({ [e.target.name]: e.target.value });
+    }
+
+    render() {
+        return (
+            <div>
+                <div className="container">
+
+                    <div className="whiteSpace"></div>
+
+                    <form
+                        className="form"
+                        onSubmit={this.onSubmit}>
+
+                        <input 
+                            className="searchInput"
+                            type="text"
+                            name="text"
+                            placeholder="Search bands..."
+                            value={this.state.text}
+                            onChange={this.onChange}></input>
+                        <input
+                            type="submit"
+                            value="search"
+                            className="searchButton">
+                        </input>
+                    </form>
+
+                </div>
+
+            </div>
+        )
+    }
 }
 
 export default Search
