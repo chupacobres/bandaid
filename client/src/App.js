@@ -13,7 +13,7 @@ class App extends Component {
       <div className="divApp" >
         <Navigation />
         <Results results={this.state.results} />
-        <FormLogIn />
+        <Modal/>
       </div>
     );
   }

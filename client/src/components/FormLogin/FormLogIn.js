@@ -4,8 +4,8 @@ import "./FormLogIn.css";
 class FormLogIn extends Component {
     // Setting the component's initial state
     state = {
-      firstName: "",
-      lastName: "",
+      Name: "",
+      email: "",
       password: ""
     };
   
@@ -26,12 +26,12 @@ class FormLogIn extends Component {
     handleFormSubmit = event => {
       // Preventing the default behavior of the form submit (which is to refresh the page)
       event.preventDefault();
-      if (!this.state.firstName || !this.state.lastName) {
+      if (!this.state.firstName || !this.state.email) {
         alert("Fill out your first and last name please!");
-      } else if (this.state.password.length < 6) {
+      } else if (this.state.password.length < 4) {
         alert(
-          `Choose a more secure password ${this.state.firstName} ${this.state
-            .lastName}`
+          `Choose a password with at least 4 digits ${this.state.firstName} ${this.state
+            .email}`
         );
       } else {
         alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
@@ -49,7 +49,7 @@ class FormLogIn extends Component {
       return (
         <div>
           <p>
-            Hello {this.state.firstName} {this.state.lastName}
+            Hello {this.state.firstName}
           </p>
           <form className="form">
             <input
@@ -60,11 +60,11 @@ class FormLogIn extends Component {
               placeholder="First Name"
             />
             <input
-              value={this.state.lastName}
-              name="lastName"
+              value={this.state.email}
+              name="email"
               onChange={this.handleInputChange}
               type="text"
-              placeholder="Last Name"
+              placeholder="email"
             />
             <input
               value={this.state.password}
