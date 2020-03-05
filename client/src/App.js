@@ -6,7 +6,6 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Navigation from './components/Navigation/Navigation';
 import Home from './pages/Home';
 import NoMatch from './pages/NoMatch'
 

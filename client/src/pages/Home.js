@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navigation from '../components/Navigation/Navigation';
 import Search from '../components/Search/Search';
+import Image from '../components/HomeImage/Image';
 // import Featured from '../components/Featured';
 // import Footer from '../components/Footer';
 // import FormLogin from '../components/FormLogin';
@@ -12,7 +13,6 @@ import Search from '../components/Search/Search';
 // import { Input, TextArea, FormBtn } from "../components/Form";
 
 
-
 class Home extends Component {
   state = {
     results: []
@@ -21,6 +21,7 @@ class Home extends Component {
     return (
       <div className="divApp" >
         <Navigation />
+        {/* <Image /> */}
         <Search />
 
       </div>
