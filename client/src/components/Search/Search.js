@@ -1,6 +1,16 @@
-import React from "react";
-import "./Search.css";
+import React, { Component } from 'react'
 
-const Search = props => <div className="Search">{props.children}</div>;
+export class Search extends Component {
+    render() {
+        return (
+            <div>
+                <form className="form">
+                    <input type="text" name="text" placeholder="Search bands..."></input>
+                    <input type="submit" value="search" className="searchBar"></input>
+                </form>
+            </div>
+        )
+    }
+}
 
-export default Search;
+export default Search
