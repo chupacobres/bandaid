@@ -1,121 +1,35 @@
-import React, {Component} from "react";
+import React, {Component} from 'react';
 import "./FormLogIn.css";
+import bandaid from "../../assets/bandaid.png";
 
-
-
-class FormLogin extends Component {
-    // Setting the component's initial state
-    state = {
-      firstName: "",
-      lastName: "",
-      password: ""
-    };
-  
-    handleInputChange = event => {
-      // Getting the value and name of the input which triggered the change
-      let value = event.target.value;
-      const name = event.target.name;
-  
-      if (name === "password") {
-        value = value.substring(0, 15);
-      }
-      // Updating the input's state
-      this.setState({
-        [name]: value
-      });
-    };
-  
-    handleFormSubmit = event => {
-      // Preventing the default behavior of the form submit (which is to refresh the page)
-      event.preventDefault();
-      if (!this.state.firstName || !this.state.lastName) {
-        alert("Fill out your first and last name please!");
-      } else if (this.state.password.length < 6) {
-        alert(
-          `Choose a more secure password ${this.state.firstName} ${this.state
-            .lastName}`
-        );
-      } else {
-        alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
-      }
-  
-      this.setState({
-        firstName: "",
-        lastName: "",
-        password: ""
-      });
-    };
-  
-    render() {
-      // Notice how each input has a `value`, `name`, and `onChange` prop
-      return (
-        <div>
-          <p>
-            Hello {this.state.firstName} {this.state.lastName}
-          </p>
-          <form className="form">
-            <input
-              value={this.state.firstName}
-              name="firstName"
-              onChange={this.handleInputChange}
-              type="text"
-              placeholder="First Name"
-            />
-            <input
-              value={this.state.lastName}
-              name="lastName"
-              onChange={this.handleInputChange}
-              type="text"
-              placeholder="Last Name"
-            />
-            <input
-              value={this.state.password}
-              name="password"
-              onChange={this.handleInputChange}
-              type="password"
-              placeholder="Password"
-            />
-            <button onClick={this.handleFormSubmit}>Submit</button>
-          </form>
-        </div>
-      );
-    }
+ function FormLogIn (props) {
+ 
+    return (
+      <div>
+        <form className="formLogIn">
+        <button className="X" onClick={props.close}>X</button>
+        <img src={bandaid} alt="LogoLogin" className="LogoLogin" />
+        <p id="p1">LOGIN</p>
+        <p id="p2">EMAIL</p>
+          <input
+            // value={this.state.email}
+            name="email"
+            onChange={props.handleInputChange}
+            type="text"
+            placeholder=""
+          />
+        <p id="p2">PASSWORD</p>
+          <input
+            // value={this.state.password}
+            name="password"
+            onChange={props.handleInputChange}
+            type="text"
+            placeholder=""
+          />
+          <button className="loginButton" onClick={props.handleFormSubmit} onClick={props.close}>Login</button>
+        </form>
+      </div>
+    );
   }
-  
-// const FormLogIn = props => 
-
-// <Modal.Dialog>
-//   <Modal.Header closeButton>
-//     <Modal.Title>Modal title</Modal.Title>
-//   </Modal.Header>
-
-//   <Modal.Body>
-//    <Form>
-//   <Form.Group as={Row} controlId="formPlaintextEmail">
-//     <Form.Label column sm="2">
-//       Email
-//     </Form.Label>
-//     <Col sm="10">
-//       <Form.Control defaultValue="email@example.com" />
-//     </Col>
-//   </Form.Group>
-
-//   <Form.Group as={Row} controlId="formPlaintextPassword">
-//     <Form.Label column sm="2">
-//       Password
-//     </Form.Label>
-//     <Col sm="10">
-//       <Form.Control type="password" placeholder="Password" />
-//     </Col>
-//   </Form.Group>
-// </Form>
-//   </Modal.Body>
-
-//   <Modal.Footer>
-//     <Button variant="secondary">Close</Button>
-//     <Button variant="primary">Save changes</Button>
-//   </Modal.Footer>
-// </Modal.Dialog>
-
 
 export default FormLogIn;

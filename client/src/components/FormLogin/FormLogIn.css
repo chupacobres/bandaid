@@ -1,0 +1,64 @@
+* {
+    font-family: 'Bebas Neue', ;
+}
+
+.formLogIn {
+    border: 2px solid black;
+    height: 600px;
+    width: 500px;
+    /* text-align: center; */
+    z-index: 1;
+    position: relative;
+    background-color: rgb(236, 215, 111);
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+#p1 {
+    font-size: 2rem;
+    margin: auto;
+}
+
+#p2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    margin: 10px auto 0px 45px;
+}
+
+input {
+    display: block;
+    margin: 0px auto 30px;
+    height: 60px;
+    width: 400px;
+    /* padding: 40px; */
+    font-size: 1.5rem;
+}
+
+.loginButton {
+    display: block;
+    margin: 50px auto;
+    height: 60px;
+    width: 300px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    background-color: yellow;
+}
+
+.LogoLogin {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    display: block;
+}
+
+.X {
+    margin: 5px 5px;
+    width: 20px;
+    font-size: 10px;
+    text-align: left;
+    justify-content: center;
+    background-color: yellow;
+
+}
