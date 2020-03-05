@@ -26,7 +26,7 @@ import bandaid from "../../assets/bandaid.png";
             type="text"
             placeholder=""
           />
-          <button className="loginButton" onClick={props.handleFormSubmit} onClick={props.close}>Login</button>
+          <button className="loginButton" onClick={props.handleFormSubmit} onClick={props.close}>Log in</button>
         </form>
       </div>
     );
