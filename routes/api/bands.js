@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const baindaidController = require("../../controllers/bandaidController");
+const bandaidController = require("../../controllers/bandaidController");
 // Matches with "/api/bands"
 router.route("/")
   .get(bandaidController.findAll)
