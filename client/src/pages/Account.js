@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import Navigation from '../components/Navigation/Navigation';
+import Search from '../components/Search';
+
 // import Featured from '../components/Featured';
 // import Footer from '../components/Footer';
 // import FormLogin from '../components/FormLogin';
 // import FormSignUp from '../components/FormSignUp';
-// import Search from '../components/Search';
 // import API from '../utils/API';
 // import { Link } from "react-router-dom";
 // import { Col, Row, Container } from "../components/Grid";
@@ -13,7 +14,7 @@ import Navigation from '../components/Navigation/Navigation';
 
 
 
-class Home extends Component {
+class Account extends Component {
   state = {
     results: []
   }
@@ -21,9 +22,10 @@ class Home extends Component {
     return (
       <div className="divApp" >
         <Navigation />
+        <Search />
       </div>
     );
   }
 }
 
-export default Home;
+export default Account;
