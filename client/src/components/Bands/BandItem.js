@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Bands.css";
 
-const bandItem = ({ avatar_url } = this.props.bandsList) => {
+const BandItem = ({ avatar_url } = this.props.bandsList) => {
     return (
         <div className="card" >
             <img
@@ -15,4 +15,4 @@ const bandItem = ({ avatar_url } = this.props.bandsList) => {
 }
 
 
-export default bandItem;
+export default BandItem;
