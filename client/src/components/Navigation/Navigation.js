@@ -52,11 +52,11 @@ class Navigation extends Component {
                 <ul>
                     <li>
 
-                    <a href="#" >Sign Up</a>
-                    <a href="#" onClick={handleClick}>  Login | </a>
-                    
-                    <Link to="#" onClick={handleClick}>  Login | </Link>
-                    <Link to="#" >Sign Up</Link>
+                    <a href="#" >Sign Up  | </a>
+                    <a href="#" onClick={handleClick}>  Login</a>
+
+                    {/* <Link to="#" onClick={handleClick}>  Login | </Link>
+                    <Link to="#" >Sign Up</Link> */}
 
                     </li>
                 </ul>

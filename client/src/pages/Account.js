@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Navigation from '../components/Navigation/Navigation';
-import Search from '../components/Search';
+import Search from '../components/Search/Search';
 
 // import Featured from '../components/Featured';
 // import Footer from '../components/Footer';

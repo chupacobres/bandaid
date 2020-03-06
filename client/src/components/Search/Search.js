@@ -6,14 +6,12 @@ class Search extends Component {
         text: ""
     }
 
-    onChange = e => {
-        console.log("function1")
-        this.setState({ [e.target.name]: e.target.value });
-    }
+    onChange = e => this.setState({ [e.target.name]: e.target.value });
 
     onSubmit = e => {
-        console.log(this.state.text)
-        this.setState({ [e.target.name]: e.target.value });
+        e.preventDefault();
+        this.props.searchBands(this.state.text);
+        this.setState({ text: "" });
     }
 
     render() {
@@ -27,18 +25,23 @@ class Search extends Component {
                         className="form"
                         onSubmit={this.onSubmit}>
 
-                        <input 
+                        <input //Search input
                             className="searchInput"
                             type="text"
                             name="text"
                             placeholder="Search bands..."
                             value={this.state.text}
-                            onChange={this.onChange}></input>
-                        <input
+                            onChange={this.onChange}>
+                        </input>
+
+                        <button //Search button 
                             type="submit"
                             value="search"
-                            className="searchButton">
-                        </input>
+                            className="searchButton"
+                            // disabled={!(this.state. && this.state.)}
+                            onClick={this.handleFormSubmit}
+                        > Search
+                        </button>
                     </form>
 
                 </div>

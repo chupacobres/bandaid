@@ -16,11 +16,16 @@ class Home extends Component {
   state = {
     results: []
   }
+
+  searchBands = text => {
+console.log(text);
+  }
+
   render() {
     return (
       <div className="divApp" >
         <Navigation />
-        <Search />
+        <Search searchBands={this.searchBands}/>
       </div>
     );
   }
