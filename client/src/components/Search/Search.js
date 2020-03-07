@@ -29,7 +29,7 @@ class Search extends Component {
                             className="searchInput"
                             type="text"
                             name="text"
-                            placeholder="Search bands..."
+                            placeholder="Search band styles to book..."
                             value={this.state.text}
                             onChange={this.onChange}>
                         </input>
@@ -54,17 +54,3 @@ class Search extends Component {
 
 export default Search
 
-
-
-// function Image() {
-//     return (
-//         <div>
-//             <div className="whiteSpace"></div>
-//             <div>
-//                 <img src={homeImg} alt="homeImg" className="homeImg" />
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Image;

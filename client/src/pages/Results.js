@@ -13,10 +13,6 @@ class Results extends Component {
     results: []
   }
 
-  // searchBands = text => {
-  //   console.log(text);
-  // }
-
   componentDidMount() {
     this.loadBands();
   }
@@ -32,7 +28,6 @@ class Results extends Component {
   render() {
     return (
       <div className="divApp" >
-        <Navigation />
         <Search searchBands={this.searchBands} />
         <Bands results={this.state.bandsList} />
       </div>

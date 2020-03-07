@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Navigation from '../components/Navigation/Navigation';
 import Search from '../components/Search/Search';
 
 // import Featured from '../components/Featured';
@@ -24,7 +23,6 @@ console.log(text);
   render() {
     return (
       <div className="divApp" >
-        <Navigation />
         <Search searchBands={this.searchBands}/>
       </div>
     );
