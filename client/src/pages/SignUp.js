@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import Navigation from '../components/Navigation/Navigation';
-import Search from '../components/Search/Search';
+import FormSignUp from '../components/FormSignUp/FormSignUp'
 
-// import Featured from '../components/Featured';
 // import Footer from '../components/Footer';
-
 // import API from '../utils/API';
 // import { Link } from "react-router-dom";
 // import { Col, Row, Container } from "../components/Grid";
@@ -12,23 +10,17 @@ import Search from '../components/Search/Search';
 // import { Input, TextArea, FormBtn } from "../components/Form";
 
 
-class Home extends Component {
-  state = {
-    results: []
-  }
-
-  searchBands = text => {
-console.log(text);
-  }
+class SignUp extends Component {
+  
 
   render() {
     return (
-      <div className="divApp" >
+      <div className="divApp">
         <Navigation />
-        <Search searchBands={this.searchBands}/>
+        <FormSignUp/>
       </div>
     );
   }
 }
 
-export default Home;
+export default SignUp;

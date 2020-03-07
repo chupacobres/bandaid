@@ -1,0 +1,26 @@
+
+.formSignUp {
+    font-family: 'Bebas Neue';
+    font-size: 2em;
+    border: 2px solid black;
+    height: auto;
+    width: 500px;
+    /* text-align: center; */
+    z-index: 1;
+    position: relative;
+    background-color: rgb(236, 215, 111);
+    margin: 10px auto;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#signUpButton {
+    display: block;
+    margin: 50px auto;
+    height: 60px;
+    width: 300px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    background-color: yellow;
+}

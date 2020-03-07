@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import "./Navigation.css";
 import bandaid from "../../assets/bandaid.png";
-// import Modal from "../FormLogIn/Modal";
+import Modal from "../FormLogIn/Modal";
+import {Link} from 'react-router-dom';
 
 class Navigation extends Component {
     state = {
@@ -33,8 +34,7 @@ class Navigation extends Component {
         const handleFormSubmit = (event) => {
             // Preventing the default behavior of the form submit (which is to refresh the page)
             event.preventDefault();
-
-            console.log(this.state)
+            // console.log(this.state)
             // this.setState({  //reset empty
             //   bandName: "",
             //   password: ""
@@ -47,10 +47,16 @@ class Navigation extends Component {
                     <img src={bandaid} alt="Logo" className="logoNav" />
                 </div>
                 <div className="leftNav">
-                    <a href="#" onClick={handleClick}>  Login | </a>
-                    <a href="#" >Sign Up</a>
-                    {/* <Modal /> */}
-                    {/* {this.state.show ?
+                    <ul>
+                        <li>
+                            <Link to="/" >Home  | </Link>
+                            <Link to="/account" >Sign Up  | </Link>
+                            <a href="#" onClick={handleClick}>  Login</a>
+                            {/* <Link to="#" onClick={handleClick}>  Login | </Link>
+                    <Link to="#" >Sign Up</Link> */}
+                        </li>
+                    </ul>
+                    {this.state.show ?
                         <Modal
                             close={handleClose}
                             handleInputChange={handleInputChange}
@@ -62,4 +68,6 @@ class Navigation extends Component {
         );
     }
 }
+
+
 export default Navigation;

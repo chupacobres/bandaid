@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import ResultsItem from './ResultsItem';
+import BandItem from './BandItem';
+import './Bands.css'
 
-class Results extends Component {
+class Bands extends Component {
     state = {
-        results: [
+        bandsList : [
             {
                 id: '1',
                 avatar_url: '',
@@ -20,7 +21,7 @@ class Results extends Component {
         return (
             <div className="divMap">
                 {this.state.results.map(result => (
-                    <ResultsItem key={result.id} result={result} /> 
+                    <BandItem key={this.state.bandList} result={result} /> 
                 ))}
             </div>
         )
@@ -28,4 +29,4 @@ class Results extends Component {
 }
 
 
-export default Results;
+export default Bands;

@@ -1,8 +1,8 @@
 * {
-  font-family: 'Bebas Neue', ;
+  font-family: 'Bebas Neue';
 }
 nav {
-  border:1px solid lightblue;
+  border:1px solid rgb(28, 26, 43);
   margin-top: 0px;
   height: 100px;
   width: 100%;
@@ -12,7 +12,7 @@ nav {
   width: 20%;
 }
 .logoNav { 
-border: 1px solid red;
+/* border: 1px solid red; */
 margin-left: 20px;
 margin-top: 10px;
 width: 140%;
@@ -20,7 +20,7 @@ text-align: left;
 float: left;
 }
 .leftNav {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 50px;
   text-align: right;
   /* float: left; */
@@ -33,14 +33,25 @@ a {
 margin-bottom: 0px;
 text-align: right;
 font-size: 1.2rem;
+color: white;
+text-decoration: none;
 }
-a:link, a:visited {
-  color:white;
-  text-decoration: none;
-  cursor: auto;
-  text-align: right;
-  margin-top: 20px;
+
+/* visited link */
+a:visited {
+  color: white;
 }
-a:link:active, a:visited:active {
-  color: darkblue;
+
+a:focus {
+  color: yellow;
+}
+
+/* mouse over link */
+a:hover {
+  color: yellow;
+}
+
+/* selected link */
+a:active {
+  color: yellow;
 } 
