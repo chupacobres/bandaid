@@ -62,7 +62,7 @@ class Navigation extends Component {
                             handleInputChange={handleInputChange}
                             handleFormSubmit={handleFormSubmit} />
                         : null
-                    }
+                    } */}
                 </div>
             </nav>
         );
