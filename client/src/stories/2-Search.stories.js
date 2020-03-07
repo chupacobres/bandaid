@@ -1,43 +1,45 @@
 import React, { Component } from 'react'
 import '../components/Search/Search.css'
+import Search from '../components/Search/Search'
 import { storiesOf } from '@storybook/react';
 
-storiesOf('Search', module)
- .add('', () => (
-            <div>
-                <div className="container">
 
-                    <div className="whiteSpace"></div>
+    storiesOf('Search', module)
+.add('search', () => <Search />);
+            // <div>
+            //     <div className="container">
 
-                    <form
-                        className="form"
-                        onSubmit={this.onSubmit}>
+            //         <div className="whiteSpace"></div>
 
-                        <input //Search input
-                            className="searchInput"
-                            type="text"
-                            name="text"
-                            placeholder="Search bands..."
-                            value={this.state.text}
-                            onChange={this.onChange}>
-                        </input>
+            //         <form
+            //             className="form"
+            //             onSubmit={this.onSubmit}>
 
-                        <button //Search button 
-                            type="submit"
-                            value="search"
-                            className="searchButton"
-                            onClick={this.handleFormSubmit}
-                        > Search
-                        </button>
-                    </form>
-                </div>
-            </div>
- )
+            //             <input //Search input
+            //                 className="searchInput"
+            //                 type="text"
+            //                 name="text"
+            //                 placeholder="Search bands..."
+            //                 value={this.state.text}
+            //                 onChange={this.onChange}>
+            //             </input>
+
+            //             <button //Search button 
+            //                 type="submit"
+            //                 value="search"
+            //                 className="searchButton"
+            //                 onClick={this.handleFormSubmit}
+            //             > Search
+            //             </button>
+            //         </form>
+            //     </div>
+            // </div>
 
 
- export default {
-    title: 'Search',
-    component: Search,
-  };
+
+//  export default {
+//     title: 'Search',
+//     component: Search
+//   };
   
   
