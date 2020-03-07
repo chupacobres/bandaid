@@ -20,7 +20,7 @@ console.log(text);
 
   render() {
     return (
-      <div className="divApp" >
+      <div className="divApp">
         <Navigation />
       </div>
     );
