@@ -40,9 +40,12 @@ class Search extends Component {
                             className="searchButton"
                             // disabled={!(this.state. && this.state.)}
                             onClick={this.handleFormSubmit}
+                            // style={}
                             
                         > Search
                         </button>
+
+
                     </form>
 
                 </div>
