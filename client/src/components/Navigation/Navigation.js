@@ -49,8 +49,8 @@ class Navigation extends Component {
                 <div className="leftNav">
                     <ul>
                         <li>
-                            <a href="#" >Home  | </a>
-                            <Link to="/" >Sign Up  | </Link>
+                            <Link to="/" >Home  | </Link>
+                            <Link to="/account" >Sign Up  | </Link>
                             <a href="#" onClick={handleClick}>  Login</a>
                             {/* <Link to="#" onClick={handleClick}>  Login | </Link>
                     <Link to="#" >Sign Up</Link> */}

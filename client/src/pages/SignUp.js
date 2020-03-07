@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Navigation from '../components/Navigation/Navigation';
+import FormSignUp from '../components/FormSignUp/FormSignUp'
 
 // import Footer from '../components/Footer';
 // import API from '../utils/API';
@@ -9,22 +10,17 @@ import Navigation from '../components/Navigation/Navigation';
 // import { Input, TextArea, FormBtn } from "../components/Form";
 
 
-class Home extends Component {
-  state = {
-    results: []
-  }
-
-  searchBands = text => {
-console.log(text);
-  }
+class SignUp extends Component {
+  
 
   render() {
     return (
       <div className="divApp">
         <Navigation />
+        <FormSignUp/>
       </div>
     );
   }
 }
 
-export default Home;
+export default SignUp;

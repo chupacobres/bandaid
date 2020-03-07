@@ -6,7 +6,7 @@ export class FormSignUp extends Component {
     render() {
         return (
             <div>
-                <form>
+                <form className="formSignUp">
                     <label for="bandName">Band name:</label>
                     <input type="text" id="bname" name="bname"></input>
                     <label for="email">email:</label>
@@ -18,6 +18,7 @@ export class FormSignUp extends Component {
                     <label for="location">Location:</label>
                     <input type="text" id="location" name="location"></input>
                     {/* IMAGE DOWNLOAD  or YOUTUBE LINK */}
+                    <button type="submit" id="signUpButton">Sign Up</button>
                 </form>
             </div>
         )
