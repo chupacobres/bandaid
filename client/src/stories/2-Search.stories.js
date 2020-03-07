@@ -1,21 +1,9 @@
 import React, { Component } from 'react'
-import './Search.css'
+import '../components/Search/Search.css'
+import { storiesOf } from '@storybook/react';
 
-class Search extends Component {
-    state = {
-        text: ""
-    }
-
-    onChange = e => this.setState({ [e.target.name]: e.target.value });
-
-    onSubmit = e => {
-        e.preventDefault();
-        this.props.searchBands(this.state.text);
-        this.setState({ text: "" });
-    }
-
-    render() {
-        return (
+storiesOf('Search', module)
+ .add('', () => (
             <div>
                 <div className="container">
 
@@ -38,33 +26,18 @@ class Search extends Component {
                             type="submit"
                             value="search"
                             className="searchButton"
-                            // disabled={!(this.state. && this.state.)}
                             onClick={this.handleFormSubmit}
-                            
                         > Search
                         </button>
                     </form>
-
                 </div>
-
             </div>
-        )
-    }
-}
-
-export default Search
+ )
 
 
-
-// function Image() {
-//     return (
-//         <div>
-//             <div className="whiteSpace"></div>
-//             <div>
-//                 <img src={homeImg} alt="homeImg" className="homeImg" />
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Image;
+ export default {
+    title: 'Search',
+    component: Search,
+  };
+  
+  
