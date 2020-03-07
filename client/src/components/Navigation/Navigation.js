@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./Navigation.css";
 import bandaid from "../../assets/bandaid.png";
 import Modal from "../FormLogIn/Modal";
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 class Navigation extends Component {
     state = {
@@ -50,7 +50,7 @@ class Navigation extends Component {
                     <ul>
                         <li>
                             <a href="#" >Home  | </a>
-                            <a href="#" >Sign Up  | </a>
+                            <Link to="/" >Sign Up  | </Link>
                             <a href="#" onClick={handleClick}>  Login</a>
                             {/* <Link to="#" onClick={handleClick}>  Login | </Link>
                     <Link to="#" >Sign Up</Link> */}
