@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./FormLogIn.css";
 import bandaid from "../../assets/bandaid.png";
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BandItem from './BandItem';
+// import BandItem from './BandItem';
 import './Bands.css'
 import API from "../../utils/API";
 
