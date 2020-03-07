@@ -39,6 +39,38 @@ const bandSeed = [
         date: new Date(Date.now())
     },
     
+    {
+        name: "Mod Sun",
+        email: "modsun@gmail.com",
+        password: "12341234",
+        genre: "hip hop",
+        setup: "Guitar, vocals, drums",
+        description: "MOD SUN. Grateful as fuck but READY TO GO! Currently on YOUR FAVORITE MOVIE tour",
+        youtubeUrl: "https://www.youtube.com/watch?v=Rj1ZBv_J3tw",
+        date: new Date(Date.now())
+    },
+
+    {
+        name: "Beach Slang",
+        email: "beachslang@paradigmagency.com",
+        password: "12341234",
+        genre: "rock",
+        setup: "Guitar, vocals, drums",
+        description: "BEACH SLANG. The Deadbeat Bang of Heartbreak City, album out now!",
+        youtubeUrl: "https://www.youtube.com/watch?v=i7nXvOTqyCY",
+        date: new Date(Date.now())
+    },
+
+    {
+        name: "The Murder Capital",
+        email: "themurdercapital@gmail.com",
+        password: "12341234",
+        genre: "rock",
+        setup: "Guitar, vocals, drums",
+        description: "THE MURDER CAPITAL. An Irish post-punk band based in Dublin.",
+        youtubeUrl: "https://www.youtube.com/watch?v=ddBjpD5kHVY",
+        date: new Date(Date.now())
+    },
 
 
 ];
