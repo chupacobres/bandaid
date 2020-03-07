@@ -52,8 +52,6 @@ class Navigation extends Component {
                             <Link to="/" >Home  | </Link>
                             <Link to="/account" >Sign Up  | </Link>
                             <a href="#" onClick={handleClick}>  Login</a>
-                            {/* <Link to="#" onClick={handleClick}>  Login | </Link>
-                    <Link to="#" >Sign Up</Link> */}
                         </li>
                     </ul>
                     {this.state.show ?
@@ -62,7 +60,7 @@ class Navigation extends Component {
                             handleInputChange={handleInputChange}
                             handleFormSubmit={handleFormSubmit} />
                         : null
-                    } */}
+                    } 
                 </div>
             </nav>
         );
