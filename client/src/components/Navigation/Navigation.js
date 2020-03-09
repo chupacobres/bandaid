@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Navigation.css";
 import bandaid from "../../assets/bandaid.png";
-import Modal from "../FormLogin/Modal";
+import Modal from "../FormLogIn/Modal";
 import {Link} from "react-router-dom";
 
 class Navigation extends Component {

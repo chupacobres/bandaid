@@ -28,8 +28,13 @@ class Results extends Component {
   render() {
     return (
       <div className="divApp" >
-        <Search searchBands={this.searchBands} />
-        <Bands results={this.state.bandsList} />
+        <Search 
+        // searchBands={this.searchBands} 
+        />
+
+        <Bands 
+        // results={this.state.bandsList} 
+        />
       </div>
     );
   }

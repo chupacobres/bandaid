@@ -3,10 +3,17 @@ import "./FormSignUp.css";
 
 
 export class FormSignUp extends Component {
+
+
+    // this.setState({
+
+    // })
+
+
     render() {
         return (
             <div>
-                <form className="formSignUp">
+                <form className="formSignUp" onSubmit={this.onSubmit}>
                     <label for="bandName">Band name:</label>
                     <input type="text" id="bname" name="bname"></input>
                     <label for="email">email:</label>
