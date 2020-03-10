@@ -35,7 +35,7 @@ class Home extends Component {
     console.log("PASSING argument", x) //OK x=prop=input
     // this.state.genreSearch= x; // WRONG DON'T DO THIS
     this.setState({genreSearch: x})
-    this.setState = { genreSearch: x } // WHY IS THIS NOT WORKING ???
+    this.setState ({ genreSearch: x }) // WHY IS THIS NOT WORKING ???
     console.log(this.setState); // CORRECT
     console.log("this.state.handlegenre", this.state.handleGenre) //undefined
     console.log("RESULTS and GENRE: ", this.state) //results and genreSearch
