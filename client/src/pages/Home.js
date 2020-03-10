@@ -14,39 +14,28 @@ import Search from '../components/Search/Search';
 class Home extends Component {
   constructor(props) {
     super(props);
-    // this.handleGenre = this.handleGenre.bind(this);
     this.state = {
       results: [],
       genreSearch: "",
     };
+    console.log("RESULTS and GENRE: ", this.state)
   }
 
-  // searchBands = text => {
-  //   console.log(text);
-  // }
-
-  // handleGenre = (genre) => {
-  //   // console.log("PASSING", genre) //OK
-  //   this.setState({ genreSearch: genre })
-  //   // console.log("STATE", this.state) //results and genreSearch
-  // }
-
-  handleGenre = (x) => {
-    console.log("PASSING argument", x) //OK x=prop=input
-    // this.state.genreSearch= x; // WRONG DON'T DO THIS
-    this.setState({genreSearch: x}) //
-    this.setState = { genreSearch: x } // WHY IS THIS NOT WORKING ???
-    console.log(this.setState); // CORRECT
-    console.log("this.state.handlegenre", this.state.handleGenre) //undefined
-    console.log("RESULTS and GENRE: ", this.state) //results and genreSearch
-  }
+  handleGenre = (genre) => {
+    console.log("passing : ", genre);
+    this.setState({
+      genreSearch: genre
+    }, function () {
+      console.log("genreSearch: ", this.state.genreSearch);
+    });
+  };
 
   render() {
     return (
       <div className="divApp" >
         <Search
           send={(prop) => {   //send = this.props = prop = this.textInput.current.value
-              // console.log(prop); //input
+            // console.log(prop); //input
             this.handleGenre(prop) //place input into function
           }}
         // searchResult={this.handleGenre}
