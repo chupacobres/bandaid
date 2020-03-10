@@ -28,6 +28,7 @@ class Results extends Component {
   render() {
     return (
       <div className="divApp" >
+        <Navigation/>
         <Search 
         // searchBands={this.searchBands} 
         />

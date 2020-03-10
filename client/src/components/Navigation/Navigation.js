@@ -51,7 +51,8 @@ class Navigation extends Component {
                         <li>
                             <Link to="/" >Home  | </Link>
                             <Link to="/account" >Sign Up  | </Link>
-                            <a href="#" onClick={handleClick}>  Login</a>
+                            <Link to="/" onClick={handleClick}>Login  | </Link>
+                            {/* <a href="#" onClick={handleClick}>  Login</a> */}
                         </li>
                     </ul>
                     {this.state.show ?
