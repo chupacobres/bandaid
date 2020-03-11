@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-// import BandItem from './BandItem';
+import BandItem from './BandItem';
 import './Bands.css'
-import API from "../../utils/API";
+// import API from "../../utils/API";
+import axios from 'axios';
 
 class Bands extends Component {
     state = {
@@ -9,15 +10,10 @@ class Bands extends Component {
     };
 
     componentDidMount() {
-        this.loadBands();
-    }
-
-    loadBands = () => {
-        API.getBands()
-            .then(res =>
-                this.setState({ bands: res.data, name: "", email: "", password: "", genre: "", setup: "", description: "", youtubeUrl: "" })
-            )
-            .catch(err => console.log(err));
+        axios.get('/results').then(res => {
+            console.log(res);
+            this.setState({ genre: res.data });
+        });
     };
 
     handleInputChange = event => {
@@ -29,9 +25,9 @@ class Bands extends Component {
     render() {
         return (
             <div className="divMap">
-                {/* {this.state.results.map(result => (
+                {this.state.results.map(result => (
                     <BandItem key={this.state.bandList} result={result} />
-                ))} */}
+                ))}
                 <p>hello</p>
             </div>
         )
