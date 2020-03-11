@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import "./FormLogIn.css";
+import "./FormSignUp.css";
 
 export default class FormSignUp extends Component {
   constructor(props) {
