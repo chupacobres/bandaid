@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Navigation.css";
 import bandaid from "../../assets/bandaid.png";
 import Modal from "../FormLogIn/Modal";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Navigation extends Component {
     state = {
@@ -44,7 +44,9 @@ class Navigation extends Component {
         return (
             <nav>
                 <div className="divLogo">
-                    <img src={bandaid} alt="Logo" className="logoNav" />
+                    <img src={bandaid}
+                        alt="Logo"
+                        className="logoNav"/>
                 </div>
                 <div className="leftNav">
                     <ul>
@@ -61,7 +63,7 @@ class Navigation extends Component {
                             handleInputChange={handleInputChange}
                             handleFormSubmit={handleFormSubmit} />
                         : null
-                    } 
+                    }
                 </div>
             </nav>
         );

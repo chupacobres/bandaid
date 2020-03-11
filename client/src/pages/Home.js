@@ -34,11 +34,12 @@ class Home extends Component {
     return (
       <div className="divApp" >
         <Search
-          send={(prop) => {   //send = this.props = prop = this.textInput.current.value
-            // console.log(prop); //input
-            this.handleGenre(prop) //place input into function
+          send={(prop) => {   
+            // console.log(prop); //input from search.js
+            this.handleGenre(prop);
           }}
-        // searchResult={this.handleGenre}
+
+
         />
 
       </div>
