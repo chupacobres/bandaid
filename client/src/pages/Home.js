@@ -8,6 +8,7 @@ import Search from '../components/Search/Search';
 // import { Col, Row, Container } from "../components/Grid";
 // import { List, ListItem } from "../components/List";
 // import { Input, TextArea, FormBtn } from "../components/Form";
+import axios from 'axios';
 
 class Home extends Component {
   constructor(props) {
@@ -19,6 +20,15 @@ class Home extends Component {
     };
     console.log("RESULTS and GENRE: ", this.state)
   }
+
+//test 
+//   componentDidMount() {
+//     axios.get('http://localhost:3001/all/rock').then(res => {
+//         console.log("axios get", res);
+//         // this.setState({ bands: res.data });
+//     });
+// };
+
 
   handleGenre = (genre) => {
     console.log("passing : ", genre);

@@ -6,28 +6,30 @@ import axios from 'axios';
 
 class Bands extends Component {
     state = {
-        genre: "",
+        bands: "",
     };
 
     componentDidMount() {
-        axios.get('/results').then(res => {
+        axios.get('http://localhost:3001/all/rock').then(res => {
             console.log(res);
-            this.setState({ genre: res.data });
+            this.setState({ bands: res.data });
         });
     };
 
-    handleInputChange = event => {
-        const { name, value } = event.target;
-        this.setState({
-            [name]: value
-        });
-    };
+    // handleInputChange = event => {
+    //     const { name, value } = event.target;
+    //     this.setState({
+    //         [name]: value
+    //     });
+    // };
+
     render() {
+        console.log("bands ", this.state)
         return (
             <div className="divMap">
-                {this.state.results.map(result => (
+                {/* {this.state.bands.map(result => (
                     <BandItem key={this.state.bandList} result={result} />
-                ))}
+                ))} */}
                 <p>hello</p>
             </div>
         )

@@ -11,7 +11,6 @@ function App() {
   return (
       <div>
         <Navigation />
-      
     <div>
       <Switch>
         <Route exact path="/" component={Home} />

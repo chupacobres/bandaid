@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Navigation from '../components/Navigation/Navigation';
+// import Navigation from '../components/Navigation/Navigation';
 import Bands from '../components/Bands/Bands'
 import Search from '..//components/Search/Search'
-import API from '../utils/API';
+// import API from '../utils/API';
 // import { Link } from "react-router-dom";
 // import { Col, Row, Container } from "../components/Grid";
 // import { List, ListItem } from "../components/List";
@@ -13,17 +13,17 @@ class Results extends Component {
     results: []
   }
 
-  componentDidMount() {
-    this.loadBands();
-  }
+  // componentDidMount() {
+  //   this.loadBands();
+  // }
 
-  loadBands = () => {
-    API.getBands()
-      .then(res =>
-        this.setState({ bands: res.data, name: ""})
-      )
-      .catch(err => console.log(err));
-  };
+  // loadBands = () => {
+  //   API.getBands()
+  //     .then(res =>
+  //       this.setState({ bands: res.data, name: ""})
+  //     )
+  //     .catch(err => console.log(err));
+  // };
 
   render() {
     return (
@@ -31,9 +31,8 @@ class Results extends Component {
         <Search 
         // searchBands={this.searchBands} 
         />
-
         <Bands 
-        // results={this.state.bandsList} 
+        results={this.state.bandsList} 
         />
       </div>
     );

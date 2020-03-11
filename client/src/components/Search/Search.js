@@ -11,9 +11,9 @@ class Search extends React.Component {
         this.textInput = React.createRef();
     }
 
-    static propTypes = {
-        send: PropTypes.func
-    };
+    // static propTypes = {
+    //     send: PropTypes.func
+    // };
 
 
     // onChange = e => this.setState({ [e.target.name]: e.target.value });
