@@ -7,7 +7,7 @@ import './Bands.css'
 class Bands extends Component {
     constructor(props) {
         super(props);
-        console.log("Bands this.props:", this.props)
+        console.log("Bands this.props:", this.props) //nothing
     }
 
     // handleInputChange = event => {

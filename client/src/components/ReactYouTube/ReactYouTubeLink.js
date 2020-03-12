@@ -9,7 +9,7 @@ export class ReactYouTubeLink extends Component {
     videoOnReady(event) {
         // access to player in all event handlers via event.target
         event.target.pauseVideo();
-        console.log(event.target)
+        console.log("reactyoutubelink:", event.target)
     }
 
     render() {
@@ -22,6 +22,8 @@ export class ReactYouTubeLink extends Component {
         };
 
         const {videoId} = this.props
+
+        console.log("RYTL.js videoId:", videoId)
  
         return (
             <YouTube
@@ -32,7 +34,6 @@ export class ReactYouTubeLink extends Component {
         );
     }
 
-   
 }
 
 export default ReactYouTubeLink;
