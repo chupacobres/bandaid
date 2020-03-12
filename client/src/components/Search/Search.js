@@ -51,6 +51,7 @@ class Search extends React.Component {
                                 type="text"
                                 name="text"
                                 placeholder="Search band by genre to book..."
+                                autocomplete="off"
                                 // value={this.state.text}
                                 // onChange={this.onChange}
                                 ref={this.textInput}

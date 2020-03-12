@@ -8,7 +8,7 @@ const BandItem = (props) => {
 
             <p>{props.taco.name}</p>
             <p >{props.taco.email}</p>
-            {/* <p>{props.taco.genre}</p> */}
+            <p>{props.taco.genre}</p>
 
             {/* <img
                 src={avatar_url} alt="" className="imageBand"
