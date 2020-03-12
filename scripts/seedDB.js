@@ -15,6 +15,7 @@ const bandSeed = [
         setup: "Drums, Bass, Congas, Guitar, Saxophone, Vocals",
         description: "Grupo Rebolú is an Afro-Colombian musical ensemble that includes some of the finest Colombian musicians in the United States. The group was created by Ronald Polo (a vocalist, composer, and player of the native Colombian flute known as a gaita), Morris Cañate (a master traditional drummer), and Johanna Castañeda (a vocalist and percussionist) to promote the rich musical traditions of their heritage: the African descendants of Colombia’s Caribbean coast. They believe these folkloric traditions should continually evolve over time and incorporate the musical ideas and creativity of new generations of musicians. The original compositions of Ronald Polo for Grupo Rebolú forge new paths for Colombian music, while respectfully remaining faithful to traditional Afro-Colombian rhythms such as gaita, tambora, chalupa, and bullerengue.",
         youtubeUrl: "https://www.youtube.com/watch?v=2_AInJHlK6Q",
+        number: "2_AInJHlK6Q",
         date: new Date(Date.now())
     },
     {

@@ -17,7 +17,7 @@ class Home extends Component {
     this.state = {
       results: [],
       bands: [],
-      genreSearch: "",
+      genreSearch: ""
     };
     console.log("RESULTS and GENRE: ", this.state)
   }
