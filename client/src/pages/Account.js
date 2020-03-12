@@ -12,8 +12,6 @@ import Search from '../components/Search/Search';
 // import { List, ListItem } from "../components/List";
 // import { Input, TextArea, FormBtn } from "../components/Form";
 
-
-
 class Account extends Component {
   state = {
     results: []

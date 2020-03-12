@@ -1,16 +1,17 @@
 .divMap {
     width: 80%;
     margin: 0px auto;
-    height: 80%;
-    border: 3px solid green;
-    background-color: lightskyblue;
+    height: auto;
+    /* border: 10px solid green; */
+    background-color:rgba(48, 155, 204, 0.2)/
     /* background-color:  rgb(194, 87, 26); */
 }
 
 .card {
-    border: 1px solid green;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid black;
     margin: 100px auto 20px;
-    height: 100px;
+    height: auto;
     text-align: center;
     width: 80%;
     display: block;

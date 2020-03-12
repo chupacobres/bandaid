@@ -14,23 +14,23 @@ import Bands from '../components/Bands/Bands'
 class Home extends Component {
   constructor(props) {
     super(props);
-    // this.handleGenre = this.handleGenre.bind(this);
     this.state = {
       results: [],
       bands: [],
-      genreSearch: "",
+      genreSearch: "rock",
     };
     console.log("RESULTS and GENRE: ", this.state)
   }
 
-  //test 
+  //load data from a remote endpoint:
   componentDidMount() {
-    axios.get('http://localhost:3001/all/rock').then(res => {
+    axios.get('http://localhost:3001/all').then(res => {
       console.log("axios get", res);
       this.setState({ bands: res.data });
     });
   };
 
+  //passing search input to change state 
   handleGenre = (genre) => {
     console.log("passing : ", genre);
     this.setState({
@@ -39,12 +39,6 @@ class Home extends Component {
       console.log("genreSearch: ", this.state.genreSearch);
     });
   };
-
-  filterBand = () => {
-
-  }
- 
-
 
   render() {
     return (
@@ -55,7 +49,7 @@ class Home extends Component {
             this.handleGenre(prop)
           }}
         />
-        <Bands test={this.state.bands}/>
+        <Bands bands={this.state.bands} genre={this.state.genreSearch} />
       </div>
     );
   }

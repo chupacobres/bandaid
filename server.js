@@ -28,8 +28,8 @@ app.get("/all/:search", function (req, res) {
 
 //all bands
 app.get("/all", function (req, res) {
-  db.Band.findAll(
-    { bands },
+  db.Band.find(
+    { },
     (err, found) => err ? console.log(err) : res.json(found)
   );
 });

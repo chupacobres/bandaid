@@ -7,15 +7,8 @@ import './Bands.css'
 class Bands extends Component {
     constructor(props) {
         super(props);
-        console.log(this.props)
+        console.log("Bands this.props:", this.props)
     }
-
-    // componentDidMount() {
-    //     axios.get('http://localhost:3000/all').then(res => {
-    //         console.log(res);
-    //         this.setState({ bands: res.data });
-    //     });
-    // };
 
     // handleInputChange = event => {
     //     const { name, value } = event.target;
@@ -24,18 +17,28 @@ class Bands extends Component {
     //     });
     // };
 
+    // filterBands = (name) => {
+    //     this.props.test.filter(band => {
+    //         return band.name === name
+    //     })
+    // }
+
     render() {
-        console.log("bands ", this.props.test)
+        //filter by genre
+        let testBands = this.props.bands.filter(band => {
+            return band.genre === this.props.genre
+        })
+        // console.log("filterBands() ", testBands)
+
+        //return the genre and map through all bands with that genre
         return (
             <div className="divMap">
-                {this.props.test.map(pickle => (
-                    <BandItem taco={pickle} />
+                {testBands.map(pickle => (
+                    <BandItem key={this.props.id} taco={pickle} />
                 ))}
-                {/* <p>hello</p> */}
             </div>
         )
     }
 }
-
 
 export default Bands;
