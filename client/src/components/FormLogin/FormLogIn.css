@@ -1,8 +1,7 @@
-* {
-    font-family: 'Bebas Neue', ;
-}
+
 
 .formLogIn {
+    font-family: 'Bebas Neue' ;
     border: 2px solid black;
     height: 600px;
     width: 500px;

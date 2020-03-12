@@ -1,12 +1,20 @@
 import React from 'react';
 import './App.css';
-import { Switch, Route} from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import Home from './pages/Home';
 // import Account from './pages/Account';
 import SignUp from './pages/SignUp';
 import Results from './pages/Results';
 import NoMatch from './pages/NoMatch'
 import Navigation from './components/Navigation/Navigation'
+
+
 function App() {
   return (
       <div>

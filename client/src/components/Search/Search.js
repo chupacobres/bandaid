@@ -9,6 +9,7 @@ class Search extends React.Component {
     constructor() {
         super();
         this.textInput = React.createRef();
+        // state = { }
     }
 
     // static propTypes = {
@@ -16,7 +17,7 @@ class Search extends React.Component {
     // };
 
 
-    // onChange = e => this.setState({ [e.target.name]: e.target.value });
+    onChange = e => this.setState({ [e.target.name]: e.target.value });
 
     // onSubmit = (genre) => {
     //     // e.preventDefault();
@@ -36,12 +37,12 @@ class Search extends React.Component {
 
         return (
             <React.Fragment>
-                    <div className="container">
 
                         <div className="whiteSpace"></div>
 
+                    <div className="container">
                         <form
-                            className="form"
+                            className="formSearch"
                             // onSubmit={this.onSubmit}
                             >
 
@@ -49,10 +50,11 @@ class Search extends React.Component {
                                 className="searchInput"
                                 type="text"
                                 name="text"
-                                placeholder="Search band styles to book..."
+                                placeholder="Search band by genre to book..."
                                 // value={this.state.text}
                                 // onChange={this.onChange}
                                 ref={this.textInput}
+
                                 >
                             </input>
 
@@ -66,7 +68,7 @@ class Search extends React.Component {
                                 // onClick={() => this.props.searchResult(this.state.text)}
                                 onClick={() => {
                                     send(this.textInput.current.value);
-
+                                
                                 }}
                             // style={}     
                             > Search

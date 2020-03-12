@@ -10,6 +10,13 @@ const apiRoutes = require("./api");
 //   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 // });
 
+router.get("/all", function (req, res) {
+  db.bandaid.find(
+    {},
+    (err, found) => err ? console.log(err) : res.json(found)
+  );
+});
+
 router.get("/all/:search", function (req, res) {
   db.bandaid.find(
     { genre: req.params.search },

@@ -2,19 +2,13 @@ import React, { Component } from 'react';
 import BandItem from './BandItem';
 import './Bands.css'
 // import API from "../../utils/API";
-import axios from 'axios';
+// import axios from 'axios';
 
 class Bands extends Component {
-    state = {
-        bands: "",
-    };
-
-    componentDidMount() {
-        axios.get('http://localhost:3001/all/rock').then(res => {
-            console.log(res);
-            this.setState({ bands: res.data });
-        });
-    };
+    constructor(props) {
+        super(props);
+        console.log("Bands this.props:", this.props)
+    }
 
     // handleInputChange = event => {
     //     const { name, value } = event.target;
@@ -23,18 +17,28 @@ class Bands extends Component {
     //     });
     // };
 
+    // filterBands = (name) => {
+    //     this.props.test.filter(band => {
+    //         return band.name === name
+    //     })
+    // console.log("filterBands() ", testBands)
+    // }
+
     render() {
-        console.log("bands ", this.state)
+        //filter by genre
+        let testBands = this.props.bands.filter(band => {
+            return band.genre === this.props.genre
+        })
+
+        //return the genre and map through all bands with that genre
         return (
             <div className="divMap">
-                {/* {this.state.bands.map(result => (
-                    <BandItem key={this.state.bandList} result={result} />
-                ))} */}
-                <p>hello</p>
+                {testBands.map(pickle => (
+                    <BandItem key={this.props.id} taco={pickle} />
+                ))}
             </div>
         )
     }
 }
-
 
 export default Bands;
