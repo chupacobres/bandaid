@@ -2,19 +2,20 @@ import React, { Component } from 'react';
 import BandItem from './BandItem';
 import './Bands.css'
 // import API from "../../utils/API";
-import axios from 'axios';
+// import axios from 'axios';
 
 class Bands extends Component {
-    state = {
-        bands: "",
-    };
+    constructor(props) {
+        super(props);
+        console.log(this.props)
+    }
 
-    componentDidMount() {
-        axios.get('http://localhost:3001/all/rock').then(res => {
-            console.log(res);
-            this.setState({ bands: res.data });
-        });
-    };
+    // componentDidMount() {
+    //     axios.get('http://localhost:3000/all').then(res => {
+    //         console.log(res);
+    //         this.setState({ bands: res.data });
+    //     });
+    // };
 
     // handleInputChange = event => {
     //     const { name, value } = event.target;
@@ -24,13 +25,13 @@ class Bands extends Component {
     // };
 
     render() {
-        console.log("bands ", this.state)
+        console.log("bands ", this.props.test)
         return (
             <div className="divMap">
-                {/* {this.state.bands.map(result => (
-                    <BandItem key={this.state.bandList} result={result} />
-                ))} */}
-                <p>hello</p>
+                {this.props.test.map(pickle => (
+                    <BandItem taco={pickle} />
+                ))}
+                {/* <p>hello</p> */}
             </div>
         )
     }
