@@ -21,6 +21,7 @@ class Bands extends Component {
     //     this.props.test.filter(band => {
     //         return band.name === name
     //     })
+    // console.log("filterBands() ", testBands)
     // }
 
     render() {
@@ -28,7 +29,6 @@ class Bands extends Component {
         let testBands = this.props.bands.filter(band => {
             return band.genre === this.props.genre
         })
-        console.log("filterBands() ", testBands)
 
         //return the genre and map through all bands with that genre
         return (
