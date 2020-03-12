@@ -1,14 +1,14 @@
 import React from 'react';
-import "./Bands.css";
+import "./BandItem.css";
 
 const BandItem = (props) => {
     // console.log("taco", props.taco)
     return (
         <div className="card" >
 
-            <h2 >{props.taco.name}</h2>
-            <h2 >{props.taco.email}</h2>
-            <h2 >{props.taco.genre}</h2>
+            <p>{props.taco.name}</p>
+            <p >{props.taco.email}</p>
+            {/* <p>{props.taco.genre}</p> */}
 
             {/* <img
                 src={avatar_url} alt="" className="imageBand"

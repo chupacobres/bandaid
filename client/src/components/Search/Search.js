@@ -37,12 +37,12 @@ class Search extends React.Component {
 
         return (
             <React.Fragment>
-                    <div className="container">
 
                         <div className="whiteSpace"></div>
 
+                    <div className="container">
                         <form
-                            className="form"
+                            className="formSearch"
                             // onSubmit={this.onSubmit}
                             >
 
@@ -50,7 +50,7 @@ class Search extends React.Component {
                                 className="searchInput"
                                 type="text"
                                 name="text"
-                                placeholder="Search band styles to book..."
+                                placeholder="Search band by genre to book..."
                                 // value={this.state.text}
                                 // onChange={this.onChange}
                                 ref={this.textInput}
