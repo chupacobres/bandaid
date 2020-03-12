@@ -21,13 +21,12 @@ export class ReactYouTubeLink extends Component {
             }
         };
 
-        const {videoId} = this.props
-
+        const {videoId} = this.props //UNDEFINED. Not sure what should we pass here...
         console.log("RYTL.js videoId:", videoId)
  
         return (
             <YouTube
-                videoId={videoId}
+                videoId={videoId} //THIS IS WHAT WERE TRACKING
                 opts={opts}
                 onReady={this.videoOnReady}
             />

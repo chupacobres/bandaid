@@ -7,19 +7,22 @@ const BandItem = (props) => {
 
     console.log("taco", props.taco) //entire taco AKA band data
 
-    const videoId = props.taco.linkYouTube;
-
-    console.log("videoId BandItem.js", videoId) //undefined
+    const videoId = props.taco.linkYouTube; //UNDEFINED
+    console.log("videoId BandItem.js", videoId) 
 
 
     return (
         <div className="card" >
 
-            <p>"{props.taco.name}" Genre : {props.taco.genre}</p>
+            <p>"{props.taco.name}" Genre : {props.taco.genre}</p> 
 
-            {/* <ReactYouTubeLink videoId='Rj1ZBv_J3tw' /> //This link works */}
 
-            <ReactYouTubeLink videoId={videoId} />
+            {/* YOUTUBE LINK */}
+            {/* <ReactYouTubeLink videoId='Rj1ZBv_J3tw' /> //This link works! but we need all of them */}
+            {/* they go IN HERE: */}
+            <ReactYouTubeLink videoId={videoId} /> 
+
+
 
             <p >{props.taco.email}</p>
 
