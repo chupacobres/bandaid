@@ -7,7 +7,7 @@ import './Bands.css'
 class Bands extends Component {
     constructor(props) {
         super(props);
-        console.log("Bands this.props:", this.props)
+        console.log("Bands this.props:", this.props) //nothing
     }
 
     // handleInputChange = event => {
@@ -17,24 +17,19 @@ class Bands extends Component {
     //     });
     // };
 
-    // filterBands = (name) => {
-    //     this.props.test.filter(band => {
-    //         return band.name === name
-    //     })
-    // console.log("filterBands() ", testBands)
-    // }
-
     render() {
+        console.log("this.props.genre: ", this.props.genre)
         //filter by genre
-        let testBands = this.props.bands.filter(band => {
-            return band.genre === this.props.genre
+        let filterBandsByGenre = this.props.bands.filter(band => {
+            // return band.genre === this.props.genre
+            return band.genre.toLowerCase().indexOf(this.props.genre.toLowerCase()) !== -1;  
         })
 
         //return the genre and map through all bands with that genre
         return (
             <div className="divMap">
-                {testBands.map(pickle => (
-                    <BandItem key={this.props.id} taco={pickle} />
+                {filterBandsByGenre.map((pickle,index) => (
+                    <BandItem key={index} taco={pickle} />
                 ))}
             </div>
         )

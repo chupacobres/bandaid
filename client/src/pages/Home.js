@@ -18,6 +18,7 @@ class Home extends Component {
       results: [],
       bands: [],
       genreSearch: "",
+      linkYouTube: []
     };
     console.log("RESULTS and GENRE: ", this.state)
   }
@@ -48,10 +49,12 @@ class Home extends Component {
           send={(prop) => {   //prop = this.textInput.current.value in Search.js
             // console.log(prop); //input
             this.handleGenre(prop)
-
           }}
         />
-        <Bands bands={this.state.bands} genre={this.state.genreSearch} />
+        <Bands
+          bands={this.state.bands}
+          genre={this.state.genreSearch}
+          linkYouTube={this.state.youtubeVideo} />
       </div>
     );
   }
