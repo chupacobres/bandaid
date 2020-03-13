@@ -7,7 +7,7 @@ router.get('/',(req,res) => {
 });
 
 //POST api/auth , Auth user , public
-router.get('/',(req,res) => {
+router.post('/',(req,res) => {
     res.send('Log in user')
 });
 

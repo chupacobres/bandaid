@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-// import Navigation from '../components/Navigation/Navigation';
 import Search from '../components/Search/Search';
-// import Featured from '../components/Featured';
-// import Footer from '../components/Footer';
-// import API from '../utils/API';
-// import { Link } from "react-router-dom";
-// import { Col, Row, Container } from "../components/Grid";
-// import { List, ListItem } from "../components/List";
-// import { Input, TextArea, FormBtn } from "../components/Form";
 import axios from 'axios';
 import Bands from '../components/Bands/Bands'
 

@@ -12,32 +12,34 @@ app.use(express.json());
 
 app.use(cors());
 
-// app.get("/", (req, res) =>
-//   res.json({ msg: "Welcome" }))
+app.get("/", (req, res) =>
+  res.json({ msg: "Welcome" }))
+
+app.use('/', routes);
 
 app.use('/api/users', require('./routes/users'));
 app.use('/api/bands', require('./routes/bands'));
 app.use('/api/bandInfo', require('./routes/bandsInfo'));
 
-
 const PORT = process.env.PORT || 3000;
 
 
-//search by genre
-app.get("/all/:search", function (req, res) {
-  db.Band.find(
-    { genre: req.params.search },
-    (err, found) => err ? console.log(err) : res.json(found)
-  );
-});
+// //all bands
+// app.get("/all", function (req, res) {
+//   db.Band.find(
+//     {},
+//     (err, found) => err ? console.log(err) : res.json(found)
+//   );
+// });
 
-//all bands
-app.get("/all", function (req, res) {
-  db.Band.find(
-    {},
-    (err, found) => err ? console.log(err) : res.json(found)
-  );
-});
+// //search by genre
+// app.get("/all/:search", function (req, res) {
+//   db.Band.find(
+//     { genre: req.params.search },
+//     (err, found) => err ? console.log(err) : res.json(found)
+//   );
+// });
+
 
 
 // Connect to the Mongo DB
