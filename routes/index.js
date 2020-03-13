@@ -1,6 +1,7 @@
 const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
+const bands = require("../models/band")
 
 // API Routes
 // router.use("/api", apiRoutes);
@@ -23,5 +24,7 @@ router.get("/all/:search", function (req, res) {
     (err, found) => err ? console.log(err) : res.json(found)
   );
 });
+
+
 
 module.exports = router;

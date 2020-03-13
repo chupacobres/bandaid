@@ -12,11 +12,14 @@ const router = require("express").Router();
 //   .put(bandaidController.update)
 //   .delete(bandaidController.remove)
 
-
   router.get("/all/:search", function (req, res) {
     db.bandaid.find(
       { genre: req.params.search },
       (err, found) => err ? console.log(err) : res.json(found)
     );
   });
+
+  
+
+
 module.exports = router;

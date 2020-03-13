@@ -19,12 +19,12 @@ class SignUp extends Component {
 
 
     //post data from a remote endpoint:
-    componentDidMount() {
-      axios.post('http://localhost:3001/account').then(res => {
-        console.log("axios get", res);
-        this.setState({ bands: res.data });
-      });
-    };
+    // componentDidMount() {
+    //   axios.post('http://localhost:3001/account').then(res => {
+    //     console.log("axios get", res);
+    //     this.setState({ bands: res.data });
+    //   });
+    // };
 
 
   render() {
