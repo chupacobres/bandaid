@@ -1,4 +1,7 @@
+const path = require("path");
 const router = require("express").Router();
+const apiRoutes = require("./api");
+
 
   //GET api/bands , get your band info , private
 router.get('/',(req,res) => {
@@ -20,4 +23,4 @@ router.delete('/:id',(req,res) => {
 });
 
   
-module.exports = router;
+module.exports = bandsInfo;

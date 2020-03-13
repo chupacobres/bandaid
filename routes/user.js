@@ -1,5 +1,7 @@
-const express = require('express');
-const router = express.Router();
+const path = require("path");
+const router = require("express").Router();
+const apiRoutes = require("./api");
+const bands = require("../models/User")
 
 // const User = require('../models/User');
 
@@ -8,7 +10,7 @@ router.post('/', (req, res) => {
 });
 
 
-module.exports = router;
+module.exports = user;
 
 // // Route: POST endpoint:api/users, to register user, public access
 // router.post('/',

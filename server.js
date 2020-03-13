@@ -1,9 +1,9 @@
 const express = require("express");
+const app = express();
 const mongoose = require("mongoose");
 const routes = require("./routes");
-const app = express();
+// require('./routes')(app);
 const cors = require('cors');
-
 
 const db = require("./models");
 
@@ -12,8 +12,8 @@ app.use(express.json());
 
 app.use(cors());
 
-app.get("/", (req, res) =>
-  res.json({ msg: "Welcome" }))
+// app.get("/", (req, res) =>
+//   res.json({ msg: "Welcome" }))
 
 app.use('/', routes);
 
