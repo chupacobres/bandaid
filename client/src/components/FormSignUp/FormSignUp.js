@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
-import "./FormSignUp.css";
+import '../FormSignUp/FormSignUp.css';
 
 export default class FormSignUp extends Component {
   constructor(props) {
-      super(props);
+    super(props);
 
     this.onChangeCreateName = this.onChangeCreateName.bind(this);
     this.onChangeCreateEmail = this.onChangeCreateEmail.bind(this);
@@ -91,7 +91,7 @@ export default class FormSignUp extends Component {
     }
 
     axios.post('http://localhost:3000/band/add', newBand)
-    .then(res => console.log(res.data));
+      .then(res => console.log(res.data));
 
     this.setState({
       band_name: '',
@@ -103,36 +103,36 @@ export default class FormSignUp extends Component {
       band_youtube: ''
     })
   }
-    render() {
-        return (
-            <div>
-                <form className="formSignUp" onSubmit={this.onSubmit}>
+  render() {
+    return (
+      <div>
+        <form className="formSignUp" onSubmit={this.onSubmit}>
 
-                    <label for="bandName">Band name:</label>
-                    <input type="text" id="bname" name="bname" value={this.state.band_name}></input>
+          <label for="bandname">Band name:</label>
+          <input type="text" id="bandname" name="bandname"value={this.state.band_name}onChange={this.onChangeCreateName}></input>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" value={this.state.band_email}></input>
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" value={this.state.band_email}onChange={this.onChangeCreateEmail}></input>
 
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" value={this.state.band_password}></input>
+          <label for="password">Password:</label>
+          <input type="text" id="password" name="password" value={this.state.band_password}onChange={this.onChangeCreatePassword}></input>
 
-                    <label for="genre">Genre:</label>
-                    <input type="text" id="genre" name="genre" value={this.state.band_genre}></input>
+          <label for="genre">Genre:</label>
+          <input type="text" id="bgenre" name="bgenre" value={this.state.band_genre}onChange={this.onChangeCreateGenre}></input>
 
-                    <label for="lineup">Set-up:</label>
-                    <input type="text" id="lineup" name="lineup" value={this.state.band_lineup}></input>
+          <label for="setup">Set-up:</label>
+          <input type="text" id="lineup" name="lineup" value={this.state.band_lineup}onChange={this.onChangeCreateSetup}></input>
 
-                    <label for="description">Description:</label>
-                    <input type="text" id="description" name="location"></input>
-               
-                    <label for="youtube">Youtube URL:</label>
-                    <input type="url" id="youtube" name="youtube"></input>
+          <label for="description">Description:</label>
+          <input type="text" id="description" name="description" value={this.band_description}onChange={this.onChangeCreateDescription}></input>
 
-                    <button type="submit" id="signUpButton" value="Add Band">Sign Up</button>
-                </form>
-            </div>
-        )
-    }
+          <label for="youtube">Youtube URL:</label>
+          <input type="url" id="youtube" name="youtube" value={this.state.band_youtubeurl}onChange={this.onChangeCreateYoutubeUrl}></input> 
+
+          <button type="submit" id="signUpButton" value="Add Band">Sign Up</button>
+        </form>
+      </div>
+    )
+  }
 }
 
