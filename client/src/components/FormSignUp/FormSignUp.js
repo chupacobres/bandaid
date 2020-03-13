@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import '../FormSignUp/FormSignUp.css';
+import API from '../../utils/API'
+
 
 export default class FormSignUp extends Component {
   constructor(props) {
@@ -90,7 +92,7 @@ export default class FormSignUp extends Component {
       band_youtube: this.state.band_youtube
     }
 
-    axios.post('http://localhost:3000/band/add', newBand)
+    API.saveBand(newBand)
       .then(res => console.log(res.data));
 
     this.setState({
