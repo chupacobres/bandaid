@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const cors = require('cors');
-const PORT = process.env.PORT || 3001;
+
+const PORT = process.env.PORT || 3000;
 
 const db = require("./models");
 
@@ -16,10 +17,13 @@ app.use(express.json());
 // }
 
 app.use(cors());
- 
+
 // Add routes, both API and view
 // app.use(routes);
 
+
+// app.get("/", (req, res) =>
+//   res.json({ msg: "Welcome" }))
 
 //search by genre
 app.get("/all/:search", function (req, res) {
@@ -32,7 +36,7 @@ app.get("/all/:search", function (req, res) {
 //all bands
 app.get("/all", function (req, res) {
   db.Band.find(
-    { },
+    {},
     (err, found) => err ? console.log(err) : res.json(found)
   );
 });
@@ -42,7 +46,7 @@ app.get("/all", function (req, res) {
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bandaid");
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
 

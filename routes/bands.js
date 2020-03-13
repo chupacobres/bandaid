@@ -12,6 +12,8 @@ const router = require("express").Router();
 //   .put(bandaidController.update)
 //   .delete(bandaidController.remove)
 
+
+
   router.get("/all/:search", function (req, res) {
     db.bandaid.find(
       { genre: req.params.search },
@@ -20,6 +22,4 @@ const router = require("express").Router();
   });
 
   
-
-
 module.exports = router;
