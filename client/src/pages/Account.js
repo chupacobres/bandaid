@@ -13,9 +13,7 @@ import Search from '../components/Search/Search';
 // import { Input, TextArea, FormBtn } from "../components/Form";
 
 class Account extends Component {
-  state = {
-    results: []
-  }
+
   render() {
     return (
       <div className="divApp" >

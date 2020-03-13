@@ -129,7 +129,7 @@ export default class FormSignUp extends Component {
           <label for="youtube">Youtube URL:</label>
           <input type="url" id="youtube" name="youtube" value={this.state.band_youtubeurl}onChange={this.onChangeCreateYoutubeUrl}></input> 
 
-          <button type="submit" id="signUpButton" value="Add Band">Sign Up</button>
+          <button type="submit" id="signUpButton" value="Add Band" onClick=>Sign Up</button>
         </form>
       </div>
     )
