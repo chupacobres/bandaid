@@ -91,7 +91,7 @@ export default class FormSignUp extends Component {
     }
 
     axios.post('http://localhost:3000/band/add', newBand)
-      .then(res => console.log(res.data));
+      .then(res => console.log("axios.post", res.data));
 
     this.setState({
       band_name: '',
@@ -108,25 +108,25 @@ export default class FormSignUp extends Component {
       <div>
         <form className="formSignUp" onSubmit={this.onSubmit}>
 
-          <label for="bandname">Band name:</label>
+          <label htmlFor="bandname">Band name:</label>
           <input type="text" id="bandname" name="bandname"value={this.state.band_name}onChange={this.onChangeCreateName}></input>
 
-          <label for="email">Email:</label>
+          <label htmlFor="email">Email:</label>
           <input type="text" id="email" name="email" value={this.state.band_email}onChange={this.onChangeCreateEmail}></input>
 
-          <label for="password">Password:</label>
+          <label htmlFor="password">Password:</label>
           <input type="text" id="password" name="password" value={this.state.band_password}onChange={this.onChangeCreatePassword}></input>
 
-          <label for="genre">Genre:</label>
+          <label htmlFor="genre">Genre:</label>
           <input type="text" id="bgenre" name="bgenre" value={this.state.band_genre}onChange={this.onChangeCreateGenre}></input>
 
-          <label for="setup">Set-up:</label>
+          <label htmlFor="setup">Set-up:</label>
           <input type="text" id="lineup" name="lineup" value={this.state.band_lineup}onChange={this.onChangeCreateSetup}></input>
 
-          <label for="description">Description:</label>
+          <label htmlFor="description">Description:</label>
           <input type="text" id="description" name="description" value={this.band_description}onChange={this.onChangeCreateDescription}></input>
 
-          <label for="youtube">Youtube URL:</label>
+          <label htmlFor="youtube">Youtube URL:</label>
           <input type="url" id="youtube" name="youtube" value={this.state.band_youtubeurl}onChange={this.onChangeCreateYoutubeUrl}></input> 
 
           <button type="submit" id="signUpButton" value="Add Band">Sign Up</button>
