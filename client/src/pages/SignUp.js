@@ -16,7 +16,7 @@ class SignUp extends Component {
   render() {
     return (
       <div className="divApp">
-        <Navigation />
+        {/* <Navigation /> */}
         <FormSignUp/>
       </div>
     );
