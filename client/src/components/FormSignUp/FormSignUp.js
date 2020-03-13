@@ -27,43 +27,43 @@ export default class FormSignUp extends Component {
   }
 
   onChangeCreateName(e) {
-    this.setstate({
+    this.setState({
       band_name: e.target.value
     });
   }
 
   onChangeCreateEmail(e) {
-    this.setstate({
+    this.setState({
       band_email: e.target.value
     });
   }
 
   onChangeCreatePassword(e) {
-    this.setstate({
+    this.setState({
       band_password: e.target.value
     });
   }
 
   onChangeCreateGenre(e) {
-    this.setstate({
+    this.setState({
       band_genre: e.target.value
     });
   }
 
   onChangeCreateSetup(e) {
-    this.setstate({
+    this.setState({
       band_setup: e.target.value
     });
   }
 
   onChangeCreateDescription(e) {
-    this.setstate({
+    this.setState({
       band_description: e.target.value
     });
   }
 
   onChangeCreateYoutubeUrl(e) {
-    this.setstate({
+    this.setState({
       band_youtubeurl: e.target.value
     });
   }
