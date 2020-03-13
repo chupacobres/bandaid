@@ -4,26 +4,24 @@ const routes = require("./routes");
 const app = express();
 const cors = require('cors');
 
-const PORT = process.env.PORT || 3000;
 
 const db = require("./models");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Serve up static assets (usually on heroku)
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-// }
-
 app.use(cors());
-
-// Add routes, both API and view
-// app.use(routes);
-
 
 // app.get("/", (req, res) =>
 //   res.json({ msg: "Welcome" }))
+
+app.use('/api/users', require('./routes/users'));
+app.use('/api/bands', require('./routes/bands'));
+app.use('/api/bandInfo', require('./routes/bandsInfo'));
+
+
+const PORT = process.env.PORT || 3000;
+
 
 //search by genre
 app.get("/all/:search", function (req, res) {
@@ -53,7 +51,7 @@ app.listen(PORT, function () {
 
 
 
-//PROD
+//PROD CORS
 // // Set up a whitelist and check against it:
 // var whitelist = ['http://example1.com', 'http://example2.com']
 // var corsOptions = {

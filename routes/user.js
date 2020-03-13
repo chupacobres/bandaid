@@ -4,11 +4,7 @@ const router = express.Router();
 const User = require('../models/User');
 
 
-// @route    POST api/users
-// @desc     Register user
-// @access   Public
-
-
+// Route: POST endpoint:api/users, to register user, public access
 router.post('/',
 	[
 		// check('name', 'Name is required')
