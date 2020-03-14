@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const db = require("../models");
+const banddb = require("../models/band");
 
 mongoose.connect(
     process.env.MONGODB_URI ||
@@ -40,7 +40,7 @@ const bandSeed = [
         youtubeVideo:"UmvsWscsGpIQ",
         date: new Date(Date.now())
     },
-    
+
     {
         name: "Mod Sun",
         email: "modsun@gmail.com",
@@ -79,9 +79,9 @@ const bandSeed = [
 
 
 ];
-db.Band
+banddb
     .remove({})
-    .then(() => db.Band.collection.insertMany(bandSeed))
+    .then(() => banddb.collection.insertMany(bandSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);

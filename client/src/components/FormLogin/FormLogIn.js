@@ -29,7 +29,8 @@ function FormLogIn(props) {
         <button
           className="loginButton"
           onClick={props.handleFormSubmit}
-          onClick={props.close}>Log in</button>
+          // onClick={props.close}
+          >Log in</button>
       </form>
     </div>
   );
