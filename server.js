@@ -27,13 +27,41 @@ app.get('/bands', function (req, res) {
   );
 });
 
+
 app.post('/bands/add', function (req, res) {
-  console.log("POST req for SignUpForm", req.body)
-  banddb.Band.insertOne(
-    {bands: req.body}
-  );
+  // console.log("POST req for SignUpForm", req.body)
+banddb.create(req.body,
+(err, found) => err ? console.log(err) : res.json(found)
+);
 });
 
+
+//------------------------
+// app.post('/bands/add', function (req, res) {
+//   console.log("POST req for SignUpForm", req.body)
+//   banddb.Band.insertOne(
+//     {bands: req.body}
+//   );
+// });
+//----------------------
+
+//TEST UDEMY _____________________
+// app.post('/bands/add',async function (req, res){
+//   const { name, email, password, genre, setup, description, youtube} = req.body;
+// try {
+//   const newBand = new Band({ name, email, password, genre, setup, description, youtube})
+
+//   const band = await newBand.save();
+//   res.json(band);
+// } catch (error) {
+//   console.error(error.message);
+//   res.status(500).send('Server mess ERROR')
+// }
+// })
+//________________________
+
+
+//________________________________________________________________________
 // app.post("/articles/:id", function(req, res) {
 //   // Create a new note and pass the req.body to the entry
 //   db.Note.create(req.body)
@@ -52,6 +80,7 @@ app.post('/bands/add', function (req, res) {
 //       res.json(err);
 //     });
 // });
+// //_______________________________________________________________________
 
 
 app.get('/bands/:genre', function (req, res) {
@@ -60,7 +89,6 @@ app.get('/bands/:genre', function (req, res) {
     (err, found) => err ? console.log(err) : res.json(found)
   );
 });
-
 
 const PORT = process.env.PORT || 3001;
 
