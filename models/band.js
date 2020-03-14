@@ -20,10 +20,7 @@ const bandSchema = new Schema({
   description: {
     type: String, required: true
   },
-  youtubeUrl: {
-    type: String, required: true
-  },
-  youtubeNumber: {
+  youtubeVideoId: {
     type: String, required: true
   },
   date: {
