@@ -9,19 +9,28 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-app.get('/api/bands/all/', function (req, res) {
+
+app.get('/users', function (req, res) {
+  userdb.find(
+    {},
+    (err, found) => err ? console.log(err) : res.json(found)
+  );
+});
+
+app.get('/bands', function (req, res) {
   banddb.find(
     {},
     (err, found) => err ? console.log(err) : res.json(found)
   );
 });
 
-app.get('/api/users/all/', function (req, res) {
-  userdb.find(
-    {},
+app.get('/bands/:genre', function (req, res) {
+  banddb.find(
+    {genre: req.params.genre},
     (err, found) => err ? console.log(err) : res.json(found)
   );
 });
+
 
 const PORT = process.env.PORT || 3001;
 
