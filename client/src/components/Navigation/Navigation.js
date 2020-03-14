@@ -50,8 +50,8 @@ class Navigation extends Component {
                     <ul>
                         <li>
                             <Link to="/" >Home  | </Link>
-                            <Link to="/account" >Sign Up  | </Link>
-                            <a href="#" onClick={handleClick}>  Login</a>
+                            <Link to="/account" >Add your Band  | </Link>
+                            <a href="#" onClick={handleClick}>  Edit your Band</a>
                         </li>
                     </ul>
                     {this.state.show ?

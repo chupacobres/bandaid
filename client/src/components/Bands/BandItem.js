@@ -7,7 +7,7 @@ const BandItem = (props) => {
 
     console.log("taco", props.taco) //entire taco AKA band data
 
-    const videoId = props.taco.linkYouTube; //UNDEFINED
+    const videoId = props.taco.youtubeVideo; //UNDEFINED
     console.log("videoId BandItem.js", videoId) 
 
 
