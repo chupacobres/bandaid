@@ -13,6 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 
+
+
 app.get('/users', function (req, res) {
   userdb.find(
     {},
@@ -20,6 +22,8 @@ app.get('/users', function (req, res) {
   );
 });
 
+
+//GET all bands
 app.get('/bands', function (req, res) {
   banddb.find(
     {},
@@ -27,7 +31,7 @@ app.get('/bands', function (req, res) {
   );
 });
 
-
+//POST add a band
 app.post('/bands/add', function (req, res) {
   // console.log("POST req for SignUpForm", req.body)
 banddb.create(req.body,
@@ -35,19 +39,30 @@ banddb.create(req.body,
 );
 });
 
-
-app.get('/bands/:genre', function (req, res) {
+//GET band by genre
+app.get('/bands/genre/:genre', function (req, res) {
   banddb.find(
     {genre: req.params.genre},
     (err, found) => err ? console.log(err) : res.json(found)
   );
 });
 
-app.put('/bands/login', function (req, res) {
+//GET one band by id to...
+app.get('/bands/:id', function (req, res) {
+  banddb.findOne(
+    {id: req.params._id},
+    (err, found) => err ? console.log(err) : res.json(found)
+  );
+});
+
+//...edit info of existing band
+app.post('/bands/login', function (req, res) {
   banddb.update(req.body,
     (err, found) => err ? console.log(err) : res.json(found)
 );
 });
+
+
 
 const PORT = process.env.PORT || 3001;
 

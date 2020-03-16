@@ -55,13 +55,13 @@ class Navigation extends Component {
                             <Link to="/login" > Edit your Band</Link>
                         </li>
                     </ul>
-                    {this.state.show ?
+                    {/* {this.state.show ?
                         <Modal
                             close={handleClose}
                             handleInputChange={handleInputChange}
                             handleFormSubmit={handleFormSubmit} />
                         : null
-                    } 
+                    }  */}
                 </div>
             </nav>
         );

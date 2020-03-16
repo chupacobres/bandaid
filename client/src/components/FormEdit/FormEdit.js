@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
-class Edit extends Component {
+
+class FormEdit extends Component {
 
   constructor(props) {
     super(props);
@@ -12,17 +13,18 @@ class Edit extends Component {
   }
 
   componentDidMount() {
-    axios.get('/bands'+this.props.match.params.id)
+    axios.get('http://localhost:3001/bands/' + this.props.match.params.id)
       .then(res => {
         this.setState({ band: res.data });
         console.log(this.state.band);
       });
-  }
+  };
+
 
   onChange = (e) => {
     const state = this.state.band
     state[e.target.name] = e.target.value;
-    this.setState({band:state});
+    this.setState({ band: state });
   }
 
   onSubmit = (e) => {
@@ -30,9 +32,9 @@ class Edit extends Component {
 
     const { name, email, password, genre, setup, description, youtubeVideoId } = this.state.band;
 
-    axios.put('/bands'+this.props.match.params.id, { name, email, password, genre, setup, description, youtubeVideoId })
+    axios.put('/bands' + this.props.match.params.id, { name, email, password, genre, setup, description, youtubeVideoId })
       .then((result) => {
-        this.props.history.push("/show/"+this.props.match.params.id)
+        this.props.history.push("/bands" + this.props.match.params.id)
       });
   }
 
@@ -42,11 +44,11 @@ class Edit extends Component {
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
-              EDIT BOOK
+              EDIT FORM
             </h3>
           </div>
           <div class="panel-body">
-            <h4><Link to={`/show/${this.state.book._id}`}><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Book List</Link></h4>
+            {/* <h4><Link to={`/bands/${this.state.band._id}`}><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Book List</Link></h4> */}
             <form onSubmit={this.onSubmit}>
               <div class="form-group">
                 <label for="name">Name: </label>
@@ -85,4 +87,4 @@ class Edit extends Component {
   }
 }
 
-export default Edit;
+export default FormEdit;

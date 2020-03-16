@@ -27,6 +27,7 @@ function App() {
         <Route exact path="/bands" component={Results} />
         <Route exact path="/account" component={SignUp} />
         <Route exact path="/login" component={Login} />
+      
         <Route component={NoMatch} />
       </Switch>
     </div>
