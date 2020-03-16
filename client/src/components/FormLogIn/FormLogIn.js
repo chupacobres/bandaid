@@ -1,6 +1,6 @@
 import React from 'react';
 import "./FormLogIn.css";
-import bandaid from "../../assets/bandaid.png";
+// import bandaid from "../../assets/bandaid.png";
 
 function FormLogIn(props) {
 
