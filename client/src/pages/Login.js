@@ -6,10 +6,8 @@ class LogIn extends Component {
     render() {
         return (
             <div className="divApp">
-                {/* <Navigation /> */}
                 <FormLogIn
-                    close={this.props.close}
-                    handleInputChange={this.props.handleInputChange}
+                                    handleInputChange={this.props.handleInputChange}
                     handleFormSubmit={this.props.handleFormSubmit} />
             </div>
         );

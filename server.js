@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 // const router = express.Router();
 //models
-const banddb = require("./models/BandS");
+const banddb = require("./models/BandSchema");
 // const userdb = require("./models/User");
 
 const bodyParser = require('body-parser');
@@ -17,7 +17,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 
-// // POST login public
+// //GET login auth email and password mongoose validator
+// app
+// banddb.find({email: })
+
+
+
+// // POST login public express-validator
 // app.get('/bands/login', [
 //   check('email', 'email is required')
 //   .isEmail(),
@@ -33,7 +39,6 @@ app.use(cors());
 //   res.send('passed')
 // }
 // );
-
 
 // GET bands
 app.get('/bands', function (req, res) {
