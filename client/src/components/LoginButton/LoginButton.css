@@ -1,0 +1,12 @@
+button{
+    margin-top: 0px;
+    background-color: yellow;
+    /* margin-top: 160px; */
+    width: 100px;
+    height: 50px;
+    /* margin-left: 20px; */
+    /* float: left; */
+    border-radius: 5px;
+    font-size: 1.5em;
+
+}

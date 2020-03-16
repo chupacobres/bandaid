@@ -1,5 +1,8 @@
 
-
+import React, {Component} from 'react';
+import UserGreeting from '../UserGreeting/UserGreeting'
+import GuestGreeting from '../GuestGreeting/GuestGreeting'
+import './Greeting.css'
 
 
 
@@ -10,9 +13,9 @@ function Greeting(props) {
     }
     return <GuestGreeting />;
   }
-  
-  ReactDOM.render(
-    // Try changing to isLoggedIn={true}:
-    <Greeting isLoggedIn={false} />,
-    document.getElementById('root')
-  );
+//     // Try changing to isLoggedIn={true}:
+//     <Greeting isLoggedIn={false} />,
+//   );
+
+
+  export default Greeting;

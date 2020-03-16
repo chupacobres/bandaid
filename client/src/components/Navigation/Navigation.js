@@ -3,6 +3,7 @@ import "./Navigation.css";
 import bandaid from "../../assets/bandaid.png";
 // import Modal from "../FormLogIn/Modal";
 import {Link} from "react-router-dom";
+import LoginControl from "../LoginControl/LoginControl";
 
 class Navigation extends Component {
     state = {
@@ -47,11 +48,12 @@ class Navigation extends Component {
                     <img src={bandaid} alt="Logo" className="logoNav" />
                 </div>
                 <div className="leftNav">
+                            <LoginControl></LoginControl>
                     <ul>
                         <li>
-                            <Link to="/" >Home  | </Link>
-                            <Link to="/account" >Add your Band  | </Link>
-                            <Link to="/login"> Edit your band</Link>
+                            {/* <Link to="/" >Home  | </Link>
+                            <Link to="/account" >SIGN UP | </Link>
+                        <Link to="/login"></Link> */}
                         </li>
                     </ul>
                     {/* {this.state.show ?
