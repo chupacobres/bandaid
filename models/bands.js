@@ -14,6 +14,10 @@ const bandSchema = mongoose.Schema({
     type: String,
     required: false
   },
+  password2: {
+    type: String,
+    required: false
+  },
   genre: {
     type: String,
     required: false

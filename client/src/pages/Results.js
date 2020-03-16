@@ -1,42 +1,24 @@
-import React, { Component } from "react";
-// import Navigation from '../components/Navigation/Navigation';
-import Bands from '../components/Bands/Bands'
-import Search from '..//components/Search/Search'
-// import API from '../utils/API';
-// import { Link } from "react-router-dom";
-// import { Col, Row, Container } from "../components/Grid";
-// import { List, ListItem } from "../components/List";
-// import { Input, TextArea, FormBtn } from "../components/Form";
+// import React, { Component } from "react";
+// // import Navigation from '../components/Navigation/Navigation';
+// import FormSingUp from '../components/FormSignUp/FormSignUp'
+// import Results from '../pages/Results'
+// // import API from '../utils/API';
+// // import { Link } from "react-router-dom";
+// // import { Col, Row, Container } from "../components/Grid";
+// // import { List, ListItem } from "../components/List";
+// // import { Input, TextArea, FormBtn } from "../components/Form";
 
-class Results extends Component {
-  state = {
-    results: []
-  }
 
-  // componentDidMount() {
-  //   this.loadBands();
-  // }
+// class Results extends Component {
 
-  // loadBands = () => {
-  //   API.getBands()
-  //     .then(res =>
-  //       this.setState({ bands: res.data, name: ""})
-  //     )
-  //     .catch(err => console.log(err));
-  // };
 
-  render() {
-    return (
-      <div className="divApp" >
-        <Search 
-        // searchBands={this.searchBands} 
-        />
-        <Bands 
-        results={this.state.bandsList} 
-        />
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <div className="divApp" >
+      
+//       </div>
+//     );
+//   }
+// }
 
-export default Results;
+// export default Results;

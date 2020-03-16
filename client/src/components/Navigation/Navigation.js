@@ -48,12 +48,12 @@ class Navigation extends Component {
                     <img src={bandaid} alt="Logo" className="logoNav" />
                 </div>
                 <div className="leftNav">
-                            <LoginControl></LoginControl>
+                            {/* <LoginControl></LoginControl> */}
                     <ul>
                         <li>
-                            {/* <Link to="/" >Home  | </Link>
+                            <Link to="/" >Home  | </Link>
                             <Link to="/account" >SIGN UP | </Link>
-                        <Link to="/login"></Link> */}
+                        <Link to="/login"> LOGIN</Link>
                         </li>
                     </ul>
                     {/* {this.state.show ?

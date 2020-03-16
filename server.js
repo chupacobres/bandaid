@@ -56,7 +56,7 @@ app.get('/bands', function (req, res) {
 });
 
 app.post('/bands/add', function (req, res) {
-  // console.log("POST req for SignUpForm", req.body)
+  console.log("POST req for SignUpForm", req.body)
   banddb.create(req.body,
     (err, found) => err ? console.log(err) : res.json(found)
   );

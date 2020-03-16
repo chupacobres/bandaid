@@ -3,9 +3,10 @@ import FormLogIn from '../components/FormLogIn/FormLogIn';
 
 class LogIn extends Component {
 
+    handleInputChange = () => {
+        
+    }
 
-
-    
 
 
 
@@ -14,7 +15,13 @@ class LogIn extends Component {
             <div className="divApp">
                 <FormLogIn
                     handleInputChange={this.props.handleInputChange}
+                    handleFormSubmit={this.props.handleFormSubmit}
+/>
+                {/* this.state.show ?
+                <FormLogIn
+                    handleInputChange={this.handleInputChange}
                     handleFormSubmit={this.props.handleFormSubmit} />
+                     : null */}
             </div>
         );
     }

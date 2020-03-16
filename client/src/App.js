@@ -24,7 +24,8 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/bands" component={Results} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/account" component={SignUp} />
+          {/* <Route exact path="/login" component={Logout} /> */}
+          <Route exact path="/signup" component={SignUp} />
           <Route component={NoMatch} />
         </Switch>
       </div>

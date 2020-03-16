@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import LoginButton from '../LoginButton/LoginButton';
 import LogoutButton from '../LogoutButton/LogoutButton';
-import Greeting from '../Greeting/Greeting'
+import Greeting from '../Greeting/Greeting';
 
 class LoginControl extends Component {
     constructor(props) {

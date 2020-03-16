@@ -15,6 +15,7 @@ export default class FormSignUp extends Component {
       name: '',
       email: '',
       password: '',
+      password2: '',
       genre: '',
       setup: '',
       description: '',
@@ -34,6 +35,7 @@ export default class FormSignUp extends Component {
     console.log(`band Name: ${this.state.name}`);
     console.log(`band Email: ${this.state.email}`);
     console.log(`band Password: ${this.state.password}`);
+    console.log(`band Password: ${this.state.password2}`);
     console.log(`band Genre: ${this.state.genre}`);
     console.log(`band Setup: ${this.state.setup}`);
     console.log(`band Description: ${this.state.description}`);
@@ -43,19 +45,21 @@ export default class FormSignUp extends Component {
       name: this.state.name,
       email: this.state.email,
       password: this.state.password,
+      password2: this.state.password2,
       genre: this.state.genre,
       setup: this.state.setup,
       description: this.state.description,
       youtubeVideo: this.state.youtube
     }
 
-    axios.post('http://localhost:3001/bands/add', newBand)
+    axios.post('http://localhost:3001/signup/add', newBand)
       .then(res => console.log("axios.post", res));
 
     this.setState({
       name: '',
       email: '',
       password: '',
+      password2: '',
       genre: '',
       setup: '',
       description: '',
@@ -75,6 +79,9 @@ export default class FormSignUp extends Component {
 
           <label htmlFor="password">Password:</label>
           <input type="text" id="password" name="password" value={this.state.password} onChange={this.handleChange}></input>
+          
+          <label htmlFor="password2">Password:</label>
+          <input type="text" id="password" name="password2" value={this.state.password2} onChange={this.handleChange}></input>
 
           <label htmlFor="genre">Genre:</label>
           <input type="text" id="bgenre" name="genre" value={this.state.genre} onChange={this.handleChange}></input>
