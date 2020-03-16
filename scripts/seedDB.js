@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const banddb = require("../models/Band");
+const banddb = require("../models/BandSchema");
 
 mongoose.connect(
     process.env.MONGODB_URI ||
