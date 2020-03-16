@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 // const router = express.Router();
 //models
-const banddb = require("./models/BandSchema");
+const banddb = require("./models/BandS");
 // const userdb = require("./models/User");
 
 const bodyParser = require('body-parser');
