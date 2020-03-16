@@ -12,7 +12,9 @@ import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import Results from './pages/Results';
 import NoMatch from './pages/NoMatch'
-import Navigation from './components/Navigation/Navigation'
+import Navigation from './components/Navigation/Navigation';
+// import FormLogIn from './components/FormLogIn/FormLogIn';
+import Login from './pages/Login'
 
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/bands" component={Results} />
         <Route exact path="/account" component={SignUp} />
+        <Route exact path="/login" component={Login} />
         <Route component={NoMatch} />
       </Switch>
     </div>

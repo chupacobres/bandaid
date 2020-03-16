@@ -7,9 +7,9 @@ function FormLogIn(props) {
   return (
     <div>
       <form className="formLogIn">
-        <button className="X" onClick={props.close}>X</button>
+        {/* <button className="X" onClick={props.close}>X</button>
         <img src={bandaid} alt="LogoLogin" className="LogoLogin" />
-        <p id="p1">LOGIN</p>
+        <p id="p1">LOGIN</p> */}
         <p id="p2">EMAIL</p>
         <input
           // value={this.state.email}

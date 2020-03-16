@@ -12,13 +12,13 @@ export default class FormSignUp extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      name: 'band A',
-      email: 'band A',
-      password: 'band A',
-      genre: 'band A',
-      setup: 'band A',
-      description: 'band A',
-      youtube: 'band A'
+      name: '',
+      email: '',
+      password: '',
+      genre: '',
+      setup: '',
+      description: '',
+      youtube: ''
     }
   }
 
@@ -52,15 +52,15 @@ export default class FormSignUp extends Component {
     axios.post('http://localhost:3001/bands/add', newBand)
       .then(res => console.log("axios.post", res));
 
-    // this.setState({
-    //   name: '',
-    //   email: '',
-    //   password: '',
-    //   genre: '',
-    //   setup: '',
-    //   description: '',
-    //   youtube: ''
-    // })
+    this.setState({
+      name: '',
+      email: '',
+      password: '',
+      genre: '',
+      setup: '',
+      description: '',
+      youtube: ''
+    })
   }
   render() {
     return (
