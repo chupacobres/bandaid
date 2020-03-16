@@ -1,4 +1,7 @@
-
+p {
+    text-align: center;
+    font-size: 3rem;
+}
 
 .formLogIn {
     font-family: 'Bebas Neue' ;

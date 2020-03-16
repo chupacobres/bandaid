@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {
-  // BrowserRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   // Link
@@ -13,24 +13,26 @@ import SignUp from './pages/SignUp';
 import Results from './pages/Results';
 import NoMatch from './pages/NoMatch'
 import Navigation from './components/Navigation/Navigation'
-
+import Login from './pages/Login'
 
 function App() {
   return (
+    <Router>
       <div>
         <Navigation />
-    <div>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/bands" component={Results} />
-        <Route exact path="/account" component={SignUp} />
-        <Route component={NoMatch} />
-      </Switch>
-    </div>
-    </div>
-    
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/bands" component={Results} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/account" component={SignUp} />
+          <Route component={NoMatch} />
+        </Switch>
+      </div>
+    </Router>
+
   );
 }
+
 
 
 export default App;

@@ -1,25 +1,41 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const cors = require('cors');
-const banddb = require("./models/band");
-const userdb = require("./models/user");
+// const router = express.Router();
+//models
+const banddb = require("./models/Band");
+// const userdb = require("./models/User");
+
 const bodyParser = require('body-parser');
+const cors = require('cors');
+
+// const {check, validationResult} = require('express-validator/check')
 
 app.use(bodyParser.json());
-
 app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
-
+// app.use(express.json({ extended: false}));
 app.use(cors());
 
-app.get('/users', function (req, res) {
-  userdb.find(
-    {},
-    (err, found) => err ? console.log(err) : res.json(found)
-  );
-});
 
+// // POST login public
+// app.get('/bands/login', [
+//   check('email', 'email is required')
+//   .isEmail(),
+//   check('password', 'Please enter a password with 6 or more characters')
+//   .isLength({ min:6})
+// ],
+// (req, res) => {
+//   // res.send(req.body)
+//   const errors = validationResult(req);
+//   if(!errors.isEmpty()) {
+//     return res.status(400).json({errors: errors.array()})
+//   }
+//   res.send('passed')
+// }
+// );
+
+
+// GET bands
 app.get('/bands', function (req, res) {
   banddb.find(
     {},
