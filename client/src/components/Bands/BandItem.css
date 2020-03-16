@@ -8,3 +8,13 @@
     display: block;
     background-color: rgba(48, 155, 204, 0.2);
 }
+
+.smallFont {
+    font-size: 20px;
+}
+.customFont {
+    font-size: 30px;
+}
+.mediumFont {
+    font-size: 25px;
+}
