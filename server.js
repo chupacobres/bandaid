@@ -47,24 +47,26 @@ app.post('/login', [
   }
 );
 
-// GET bands
-app.get('/bands', function (req, res) {
+// GET all bands
+app.get('/bands/all', function (req, res) {
   banddb.find(
     {},
     (err, found) => err ? console.log(err) : res.json(found)
   );
 });
 
-app.post('/bands/add', function (req, res) {
-  console.log("POST req for SignUpForm", req.body)
-  banddb.create(req.body,
+// GET bands filtered by genre
+app.get('/bands/:genre', function (req, res) {
+  banddb.find(
+    { genre: req.params.genre },
     (err, found) => err ? console.log(err) : res.json(found)
   );
 });
 
-app.get('/bands/:genre', function (req, res) {
-  banddb.find(
-    { genre: req.params.genre },
+//POST band with SignUp form
+app.post('/signup', function (req, res) {
+  console.log("POST req for SignUpForm", req.body)
+  banddb.create(req.body,
     (err, found) => err ? console.log(err) : res.json(found)
   );
 });

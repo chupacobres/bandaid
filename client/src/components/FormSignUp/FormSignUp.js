@@ -52,7 +52,7 @@ export default class FormSignUp extends Component {
       youtubeVideo: this.state.youtube
     }
 
-    axios.post('http://localhost:3001/signup/add', newBand)
+    axios.post('http://localhost:3001/signup', newBand)
       .then(res => console.log("axios.post", res));
 
     this.setState({

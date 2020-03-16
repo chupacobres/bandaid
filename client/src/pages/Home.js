@@ -17,7 +17,7 @@ class Home extends Component {
 
   //load data from a remote endpoint:
   componentDidMount() {
-    axios.get('http://localhost:3001/bands').then(res => {
+    axios.get('http://localhost:3001/bands/all').then(res => {
       console.log("axios get", res);
       this.setState({ bands: res.data });
     });

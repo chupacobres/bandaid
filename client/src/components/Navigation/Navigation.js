@@ -3,7 +3,7 @@ import "./Navigation.css";
 import bandaid from "../../assets/bandaid.png";
 // import Modal from "../FormLogIn/Modal";
 import {Link} from "react-router-dom";
-import LoginControl from "../LoginControl/LoginControl";
+// import LoginControl from "../LoginControl/LoginControl";
 
 class Navigation extends Component {
     state = {
@@ -52,7 +52,7 @@ class Navigation extends Component {
                     <ul>
                         <li>
                             <Link to="/" >Home  | </Link>
-                            <Link to="/account" >SIGN UP | </Link>
+                            <Link to="/signup" >SIGN UP | </Link>
                         <Link to="/login"> LOGIN</Link>
                         </li>
                     </ul>

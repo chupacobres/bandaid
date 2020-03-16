@@ -1,5 +1,5 @@
 
-import React, {Component} from 'react';
+import React from 'react';
 import UserGreeting from '../UserGreeting/UserGreeting'
 import GuestGreeting from '../GuestGreeting/GuestGreeting'
 import './Greeting.css'
@@ -9,13 +9,14 @@ import './Greeting.css'
 function Greeting(props) {
     const isLoggedIn = props.isLoggedIn;
     if (isLoggedIn) {
-      return <UserGreeting />;
+        return <UserGreeting />;
     }
     return <GuestGreeting />;
-  }
-//     // Try changing to isLoggedIn={true}:
-//     <Greeting isLoggedIn={false} />,
-//   );
+
+    // Try changing to isLoggedIn={true}:
+
+    // <Greeting isLoggedIn={false} />,
+};
 
 
-  export default Greeting;
+export default Greeting;
