@@ -12,7 +12,7 @@ export default class FormSignUp extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      name: '',
+    
       email: '',
       password: '',
       genre: '',
@@ -20,6 +20,14 @@ export default class FormSignUp extends Component {
       description: '',
       youtube: ''
     }
+  }
+
+  componentDidMount() {
+    console.log(this.props)
+    this.setState({
+      name: this.props.nameTest
+    })
+    console.log(this.state)
   }
 
   handleChange = (e) => {
@@ -49,9 +57,6 @@ export default class FormSignUp extends Component {
       youtubeVideo: this.state.youtube
     }
 
-    axios.post('http://localhost:3001/bands/add', newBand)
-      .then(res => console.log("axios.post", res));
-
     this.setState({
       name: '',
       email: '',
@@ -65,7 +70,7 @@ export default class FormSignUp extends Component {
   render() {
     return (
       <div>
-        <form className="formSignUp" onSubmit={this.onSubmit}>
+        <form className="formSignUp">
 
           <label htmlFor="bandname">Band name:</label>
           <input type="text" id="bandname" name="name" value={this.state.name} onChange={this.handleChange}></input>

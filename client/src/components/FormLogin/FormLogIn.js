@@ -2,44 +2,33 @@ import React, { Component } from 'react';
 import "./FormLogIn.css";
 // import bandaid from "../../assets/bandaid.png";
 
-
-// const NewItemForm = props => (
-//   <Form onSubmit={props.send_form}>
-//       <Form.Group>
-//           <TextArea 
-//               placeholder='Name your first item here' 
-//               name='item_msg'
-//               onChange={props.onInputChange} />
-//           <Form.Button primary content='Create Item' />
-//       </Form.Group>
-//   </Form>
-// )
   const FormLogIn = props => (
         <div>
           <form className="formLogIn">
-            {/* <button className="X" onClick={props.close}>X</button>
+            {/*
           <img src={bandaid} alt="LogoLogin" className="LogoLogin" />
           <p id="p1">LOGIN</p> */}
   
             <p id="p2">EMAIL</p>
             <input
-              value={props.email}
+              // value={props.email}
               name="email"
-              onChange={props.onChange}
+              // onChange={props.onChange}
               type="text"
               placeholder=""
             />
             <p id="p2">PASSWORD</p>
             <input
-              value={props.password}
+              // value={props.password}
               name="password"
-              onChange={props.onChange}
+              // onChange={props.onChange}
               type="text"
               placeholder=""
             />
             <button
+            type="button"
               className="loginButton"
-              onClick={props.onSubmit}
+              onClick={()=>props.login('pickle', 'tacos')}
             // onClick={props.close}
             >Log in</button>
           </form>

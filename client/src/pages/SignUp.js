@@ -18,10 +18,11 @@ class SignUp extends Component {
   // }
 
   render() {
+    console.log(this.props)
     return (
       <div className="divApp">
         {/* <Navigation /> */}
-        <FormSignUp />
+        <FormSignUp  nameTest={this.props.name}/>
       </div>
     );
   }
