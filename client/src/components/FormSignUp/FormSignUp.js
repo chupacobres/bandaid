@@ -73,25 +73,25 @@ export default class FormSignUp extends Component {
         <form className="formSignUp">
 
           <label htmlFor="bandname">Band name:</label>
-          <input type="text" id="bandname" name="name" value={this.state.name} onChange={this.handleChange}></input>
+          <input  type="text" id="bandname" name="name" autoComplete="off" value={this.state.name} onChange={this.handleChange}></input>
 
           <label htmlFor="email">Email:</label>
-          <input type="text" id="email" name="email" value={this.state.email} onChange={this.handleChange}></input>
+          <input type="text" id="email" name="email" autoComplete="off" value={this.state.email} onChange={this.handleChange}></input>
 
           <label htmlFor="password">Password:</label>
-          <input type="text" id="password" name="password" value={this.state.password} onChange={this.handleChange}></input>
+          <input type="text" id="password" name="password" autoComplete="off" value={this.state.password} onChange={this.handleChange}></input>
 
           <label htmlFor="genre">Genre:</label>
-          <input type="text" id="bgenre" name="genre" value={this.state.genre} onChange={this.handleChange}></input>
+          <input type="text" id="bgenre" name="genre" autoComplete="off" value={this.state.genre} onChange={this.handleChange}></input>
 
           <label htmlFor="setup">Set-up:</label>
-          <input type="text" id="lineup" name="setup" value={this.state.setup} onChange={this.handleChange}></input>
+          <input type="text" id="lineup" name="setup" autoComplete="off" value={this.state.setup} onChange={this.handleChange}></input>
 
           <label htmlFor="description">Description:</label>
-          <input type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange}></input>
+          <input type="text" id="description" name="description" autoComplete="off" value={this.state.description} onChange={this.handleChange}></input>
           
           <label htmlFor="youtube">Youtube video ID:</label>
-          <input type="url" id="youtube" name="youtube" value={this.state.youtube} onChange={this.handleChange}></input> 
+          <input type="url" id="youtube" name="youtube" autoComplete="off" value={this.state.youtube} onChange={this.handleChange}></input> 
 
           <button type="submit" id="signUpButton" value="Add Band" onClick={this.onSubmit}>Sign Up</button>
         </form>

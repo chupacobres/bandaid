@@ -7,32 +7,43 @@ import {
   // Link
 } from "react-router-dom";
 import Home from './pages/Home';
-// import Account from './pages/Account';
-import SignUp from './pages/SignUp';
 import Results from './pages/Results';
 import NoMatch from './pages/NoMatch'
 import Navigation from './components/Navigation/Navigation';
-// import FormLogIn from './components/FormLogIn/FormLogIn';
 import FormLogIn from './components/FormLogIn/FormLogIn';
+import FormSignUp from './components/FormSignUp/FormSignUp';
+import Route1 from './components/Route1/Route1'
 import axios from "axios";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      id: ''
-    }
-  };
-
-  //get document by id from result from login
-  //put edit band 
-
-
-  login = (emailTest, passwordTest) => {
-    console.log("login passed")
-    axios.post('http://localhost:3001/bands/login', { email: emailTest, password: passwordTest })
-      .then(res => console.log("axios.post", res));
+  // constructor(props) {
+  //   super(props);
+  state = {
+    // id: '',
+    // isAuthenticated: false,
+    loginStatus: false
   }
+
+
+  // login = (emailTest, passwordTest) => {
+  //   console.log("login passed")
+  //   axios.post('http://localhost:3001/bands/login', 
+  //   { email: emailTest, password: passwordTest })
+  //     .then(res => { console.log("axios.post", res)});
+  // this.setState= {
+  //   isAuthenticated : true
+
+  checkLoginStatus = () => {
+    let token = localStorage.getItem('accessToken');
+    if (token) {
+      console.log('user logged in')
+      this.setState({ loginStatus: true })
+    } else {
+      console.log('user not logged in')
+      this.setState({ loginStatus: false })
+    }
+  }
+
 
   render() {
     return (
@@ -42,18 +53,16 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/bands" component={Results} />
+            <Route exact path="/login" component={FormLogIn} changeRoute={this.login} />
 
-              {/* 
-              https://stackoverflow.com/questions/45763908/rendering-redirect-component-based-on-ajax-request/45768790 
-                */}
-
-            < Route
-              path='/account'
-              render={(props) => <SignUp {...props} name={this.state.name} />}
+            < Route exact path='/account'
+              render={(props) => <FormSignUp {...props} name={this.state.name} />}
             />
 
+            <Route1 path="/account" loginStatus={this.state.loginStatus} component={FormSignUp} />
 
             <Route component={NoMatch} />
+
           </Switch>
         </div>
       </div>

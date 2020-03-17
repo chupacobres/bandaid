@@ -11,7 +11,8 @@ import "./FormLogIn.css";
   
             <p id="p2">EMAIL</p>
             <input
-              // value={props.email}
+              autoComplete="off"
+              value={"rebolu@gmail.com"}
               name="email"
               // onChange={props.onChange}
               type="text"
@@ -19,16 +20,18 @@ import "./FormLogIn.css";
             />
             <p id="p2">PASSWORD</p>
             <input
-              // value={props.password}
               name="password"
+              // value={props.password}
+              value={'12341234'}
               // onChange={props.onChange}
+
               type="text"
               placeholder=""
             />
             <button
             type="button"
               className="loginButton"
-              onClick={()=>props.login('pickle', 'tacos')}
+              onClick={props.checkLoginStatus}
             // onClick={props.close}
             >Log in</button>
           </form>

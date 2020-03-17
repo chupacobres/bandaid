@@ -6,40 +6,40 @@ import {Link} from "react-router-dom";
 
 class Navigation extends Component {
     state = {
-        show: false,
+        // show: false,
         bandName: "",
         password: ""
     };
 
     render() {
-        const handleClick = (event) => {
-            console.log("function")
-            this.setState({ show: true })
-        }
-        const handleClose = (event) => {
-            console.log("function")
-            this.setState({ show: false })
-        }
+        // const handleClick = (event) => {
+        //     console.log("function")
+        //     this.setState({ show: true })
+        // }
+        // const handleClose = (event) => {
+        //     console.log("function")
+        //     this.setState({ show: false })
+        // }
 
-        const handleInputChange = (event) => {
-            // Getting the value and name of the input which triggered the change
-            const { name, value } = event.target;
+        // const handleInputChange = (event) => {
+        //     // Getting the value and name of the input which triggered the change
+        //     const { name, value } = event.target;
 
-            // Updating the input's state
-            this.setState({
-                [name]: value
-            });
-        };
+        //     // Updating the input's state
+        //     this.setState({
+        //         [name]: value
+        //     });
+        // };
 
-        const handleFormSubmit = (event) => {
-            // Preventing the default behavior of the form submit (which is to refresh the page)
-            event.preventDefault();
-            // console.log(this.state)
-            // this.setState({  //reset empty
-            //   bandName: "",
-            //   password: ""
-            // });
-        };
+        // const handleFormSubmit = (event) => {
+        //     // Preventing the default behavior of the form submit (which is to refresh the page)
+        //     event.preventDefault();
+        //     // console.log(this.state)
+        //     // this.setState({  //reset empty
+        //     //   bandName: "",
+        //     //   password: ""
+        //     // });
+        // };
 
         return (
             <nav>
