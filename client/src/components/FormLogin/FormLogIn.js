@@ -12,7 +12,7 @@ import "./FormLogIn.css";
             <p id="p2">EMAIL</p>
             <input
               autoComplete="off"
-              value={"rebolu@gmail.com"}
+              // value={"rebolu@gmail.com"}
               name="email"
               // onChange={props.onChange}
               type="text"
@@ -22,7 +22,7 @@ import "./FormLogIn.css";
             <input
               name="password"
               // value={props.password}
-              value={'12341234'}
+              // value={'12341234'}
               // onChange={props.onChange}
 
               type="text"

@@ -14,6 +14,7 @@ import FormLogIn from './components/FormLogIn/FormLogIn';
 import FormSignUp from './components/FormSignUp/FormSignUp';
 import Route1 from './components/Route1/Route1'
 import axios from "axios";
+const jwt = require('jsonwebtoken')
 
 class App extends Component {
   // constructor(props) {
@@ -23,7 +24,6 @@ class App extends Component {
     // isAuthenticated: false,
     loginStatus: false
   }
-
 
   // login = (emailTest, passwordTest) => {
   //   console.log("login passed")
@@ -43,7 +43,6 @@ class App extends Component {
       this.setState({ loginStatus: false })
     }
   }
-
 
   render() {
     return (
