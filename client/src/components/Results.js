@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import Navigation from '../components/Navigation/Navigation';
-import Bands from '../components/Bands/Bands'
-import Search from '..//components/Search/Search'
+import Bands from './Bands/Bands'
+import Search from './Search/Search'
 // import API from '../utils/API';
 // import { Link } from "react-router-dom";
 // import { Col, Row, Container } from "../components/Grid";

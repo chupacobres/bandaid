@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const cors = require('cors');
-const banddb = require("./models/band");
-const userdb = require("./models/user");
+const banddb = require("./models/Band");
+const userdb = require("./models/User");
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
@@ -13,47 +13,34 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 
+//Define Routes
+app.use('/api/users', require('./routes/user'))
+app.use('/api/bands', require('./routes/bands'))
+app.use('/api/auth', require('./routes/auth'))
 
 
-app.get('/users', function (req, res) {
-  userdb.find(
-    {},
-    (err, found) => err ? console.log(err) : res.json(found)
-  );
-});
+// app.get('/users', function (req, res) {
+//   userdb.find(
+//     {},
+//     (err, found) => err ? console.log(err) : res.json(found)
+//   );
+// });
 
+// //GET band by genre RESULTS
+// app.get('/bands/genre/:genre', function (req, res) {
+//   banddb.find(
+//     { genre: req.params.genre },
+//     (err, found) => err ? console.log(err) : res.json(found)
+//   );
+// });
 
-//GET all bands
-app.get('/bands', function (req, res) {
-  banddb.find(
-    {},
-    (err, found) => err ? console.log(err) : res.json(found)
-  );
-});
-
-//POST add a band
-app.post('/bands/add', function (req, res) {
-  // console.log("POST req for SignUpForm", req.body)
-  banddb.create(req.body,
-    (err, found) => err ? console.log(err) : res.json(found)
-  );
-});
-
-//GET band by genre
-app.get('/bands/genre/:genre', function (req, res) {
-  banddb.find(
-    { genre: req.params.genre },
-    (err, found) => err ? console.log(err) : res.json(found)
-  );
-});
-
-//GET one band by id to...
-app.get('/bands/:id', function (req, res) {
-  banddb.findOne(
-    { id: req.params._id },
-    (err, found) => err ? console.log(err) : res.json(found)
-  );
-});
+// //GET one band by id to... RESULTS
+// app.get('/bands/:id', function (req, res) {
+//   banddb.findOne(
+//     { id: req.params._id },
+//     (err, found) => err ? console.log(err) : res.json(found)
+//   );
+// });
 
 //...edit info of existing band
 app.post('/bands/login', function (req, res) {
@@ -68,12 +55,6 @@ app.put('/bands/:id', function (req, res) {
   );
 });
 
-// Cat.findOneAndUpdate({age: 17}, {$set:{name:"Naomi"}},function(err, doc){
-//   if(err){
-//       console.log("Something wrong when updating data!");
-//   }
-//   console.log(doc);
-// });
 
 
 //Server port, back end 

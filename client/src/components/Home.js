@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Search from '../components/Search/Search';
+import Search from './Search/Search';
 import axios from 'axios';
-import Bands from '../components/Bands/Bands'
+import Bands from './Bands/Bands'
 
 class Home extends Component {
   constructor(props) {

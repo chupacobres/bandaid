@@ -16,13 +16,10 @@ const BandItem = (props) => {
 
             <p>"{props.taco.name}" Genre : {props.taco.genre}</p>
 
-
             {/* YOUTUBE LINK */}
             {/* <ReactYouTubeLink videoId='Rj1ZBv_J3tw' /> //This link works! but we need all of them */}
             {/* they go IN HERE: */}
             <ReactYouTubeLink videoId={videoId} />
-
-
 
             <p className="customFont">{props.taco.email}</p>
             <p className="mediumFont">{props.taco.setup}</p>

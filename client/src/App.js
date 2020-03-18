@@ -6,9 +6,9 @@ import {
   Route,
   // Link
 } from "react-router-dom";
-import Home from './pages/Home';
-import Results from './pages/Results';
-import NoMatch from './pages/NoMatch'
+import Home from './components/Home';
+import Results from './components/Results';
+import NoMatch from './components/NoMatch'
 import Navigation from './components/Navigation/Navigation';
 import FormLogIn from './components/FormLogIn/FormLogIn';
 import FormSignUp from './components/FormSignUp/FormSignUp';
@@ -54,7 +54,7 @@ class App extends Component {
             <Route exact path="/bands" component={Results} />
             <Route exact path="/login" component={FormLogIn} changeRoute={this.login} />
 
-            < Route exact path='/account'
+            <Route exact path='/account'
               render={(props) => <FormSignUp {...props} name={this.state.name} />}
             />
 

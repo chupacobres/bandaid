@@ -87,7 +87,7 @@ class FormEdit extends Component {
       //     </div>
       //   </div>
       // </div>
-    // );
+    )
   }
 }
 
