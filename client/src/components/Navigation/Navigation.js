@@ -50,7 +50,7 @@ class Navigation extends Component {
                     <ul>
                         <li>
                             <Link to="/" >Home  | </Link>
-                            <Link to="/account" >Add your Band  | </Link>
+                            <Link to="/signin" >Add your Band  | </Link>
                             {/* <a href="#" onClick={handleClick}>  Edit your Band</a> */}
                             <Link to="/login" > Edit your Band</Link>
                         </li>

@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import '../FormSignUp/FormSignUp.css';
-// import API from '../../utils/API'
 
-
-export default class FormSignUp extends Component {
+class FormSignUp extends Component {
 
   constructor(props) {
     super(props);
 
-    this.onSubmit = this.onSubmit.bind(this);
-
     this.state = {
-    
       email: '',
       password: '',
       genre: '',
@@ -20,6 +14,12 @@ export default class FormSignUp extends Component {
       description: '',
       youtube: ''
     }
+
+    // this.handleChange = this.handleChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+
+    // const { email, password , genre, setup, description, youtube} = this.state;
+
   }
 
   componentDidMount() {
@@ -39,7 +39,7 @@ export default class FormSignUp extends Component {
     e.preventDefault();
 
     console.log(`Form submitted:`);
-    console.log(`band Name: ${this.state.name}`);
+    console.log("band Name:", this.state.name);
     console.log(`band Email: ${this.state.email}`);
     console.log(`band Password: ${this.state.password}`);
     console.log(`band Genre: ${this.state.genre}`);
@@ -47,15 +47,15 @@ export default class FormSignUp extends Component {
     console.log(`band Description: ${this.state.description}`);
     console.log(`band Youtube: ${this.state.youtube}`);
 
-    const newBand = {
-      name: this.state.name,
-      email: this.state.email,
-      password: this.state.password,
-      genre: this.state.genre,
-      setup: this.state.setup,
-      description: this.state.description,
-      youtubeVideo: this.state.youtube
-    }
+    // const newBand = {
+    //   name: this.state.name,
+    //   email: this.state.email,
+    //   password: this.state.password,
+    //   genre: this.state.genre,
+    //   setup: this.state.setup,
+    //   description: this.state.description,
+    //   youtubeVideo: this.state.youtube
+    // }
 
     this.setState({
       name: '',
@@ -67,13 +67,14 @@ export default class FormSignUp extends Component {
       youtube: ''
     })
   }
+
   render() {
     return (
       <div>
         <form className="formSignUp">
 
           <label htmlFor="bandname">Band name:</label>
-          <input  type="text" id="bandname" name="name" autoComplete="off" value={this.state.name} onChange={this.handleChange}></input>
+          <input  type="text" id="name" name="name" autoComplete="off" value={this.state.name} onChange={this.handleChange}></input>
 
           <label htmlFor="email">Email:</label>
           <input type="text" id="email" name="email" autoComplete="off" value={this.state.email} onChange={this.handleChange}></input>
@@ -82,7 +83,7 @@ export default class FormSignUp extends Component {
           <input type="text" id="password" name="password" autoComplete="off" value={this.state.password} onChange={this.handleChange}></input>
 
           <label htmlFor="genre">Genre:</label>
-          <input type="text" id="bgenre" name="genre" autoComplete="off" value={this.state.genre} onChange={this.handleChange}></input>
+          <input type="text" id="genre" name="genre" autoComplete="off" value={this.state.genre} onChange={this.handleChange}></input>
 
           <label htmlFor="setup">Set-up:</label>
           <input type="text" id="lineup" name="setup" autoComplete="off" value={this.state.setup} onChange={this.handleChange}></input>
@@ -100,3 +101,4 @@ export default class FormSignUp extends Component {
   }
 }
 
+export default FormSignUp;

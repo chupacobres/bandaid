@@ -2,44 +2,43 @@ import React, { Component } from 'react';
 import "./FormLogIn.css";
 // import bandaid from "../../assets/bandaid.png";
 
-  const FormLogIn = props => (
-        <div>
-          <form className="formLogIn">
-            {/*
+const FormLogIn = props => (
+  <div>
+    <form className="formLogIn">
+      {/*
           <img src={bandaid} alt="LogoLogin" className="LogoLogin" />
           <p id="p1">LOGIN</p> */}
-  
-            <p id="p2">EMAIL</p>
-            <input
-              autoComplete="off"
-              // value={"rebolu@gmail.com"}
-              name="email"
-              // onChange={props.onChange}
-              type="text"
-              placeholder=""
-            />
-            <p id="p2">PASSWORD</p>
-            <input
-              name="password"
-              // value={props.password}
-              // value={'12341234'}
-              // onChange={props.onChange}
 
-              type="text"
-              placeholder=""
-            />
-            <button
-            type="button"
-              className="loginButton"
-              onClick={props.checkLoginStatus}
-            // onClick={props.close}
-            >Log in</button>
-          </form>
-        </div >
-  );
-  
-  
-  export default FormLogIn;
+      <p id="p2">EMAIL</p>
+      <input
+        type="text"
+        autoComplete="off"
+        // value={"rebolu@gmail.com"}
+        name="email"
+        // onChange={props.onChange}
+        placeholder=""
+      />
+      <p id="p2">PASSWORD</p>
+      <input
+        type="text"
+        name="password"
+        // value={props.password}
+        // value={'12341234'}
+        // onChange={props.onChange}
+        placeholder=""
+      />
+      <button
+        type="button"
+        className="loginButton"
+        onClick={props.checkLoginStatus}
+      // onClick={props.close}
+      >Log in</button>
+    </form>
+  </div >
+);
+
+
+export default FormLogIn;
 
 
 

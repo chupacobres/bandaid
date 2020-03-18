@@ -5,6 +5,7 @@ const cors = require('cors');
 const banddb = require("./models/Band");
 const userdb = require("./models/User");
 const bodyParser = require('body-parser');
+// const router = express.Router();
 
 app.use(bodyParser.json());
 
@@ -54,8 +55,6 @@ app.put('/bands/:id', function (req, res) {
     (err, found) => err ? console.log(err) : res.json(found)
   );
 });
-
-
 
 //Server port, back end 
 const PORT = process.env.PORT || 3001;

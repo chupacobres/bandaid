@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import {
   // BrowserRouter as Router,
   Switch,
@@ -54,11 +53,11 @@ class App extends Component {
             <Route exact path="/bands" component={Results} />
             <Route exact path="/login" component={FormLogIn} changeRoute={this.login} />
 
-            <Route exact path='/account'
-              render={(props) => <FormSignUp {...props} name={this.state.name} />}
-            />
+            <Route exact path='/signin' render={
+              (props) => < FormSignUp {...props} name={this.state.name} />
+            } />
 
-            <Route1 path="/account" loginStatus={this.state.loginStatus} component={FormSignUp} />
+            {/* <Route1 path="/account" loginStatus={this.state.loginStatus} component={FormSignUp} /> */}
 
             <Route component={NoMatch} />
 
