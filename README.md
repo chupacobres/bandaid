@@ -2,9 +2,9 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-![](screenshots/landing.png)
+![](assets/screenshots/landing.png)
 
-![](screenshots/add.png)
+![](assets/screenshots/add.png)
 
-![](screenshots/edit.png)
+![](assets/screenshots/edit.png)
 
