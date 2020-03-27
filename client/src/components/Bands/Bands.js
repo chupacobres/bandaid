@@ -22,7 +22,9 @@ class Bands extends Component {
         //filter by genre
         let filterBandsByGenre = this.props.bands.filter(band => {
             // return band.genre === this.props.genre
-            return band.genre.toLowerCase().indexOf(this.props.genre.toLowerCase()) !== -1;  
+            // return band.genre.toLowerCase().indexOf(this.props.genre.toLowerCase()) !== -1;  
+            // return band.genre.indexOf(this.props.genre) !== -1;  
+            return band.genre !== -1;  
         })
 
         //return the genre and map through all bands with that genre
