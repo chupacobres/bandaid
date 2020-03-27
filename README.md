@@ -2,7 +2,7 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-![](landing.png)
+![](client/src/assets/screenshots/landing.png)
 
 ![](assets/screenshots/add.png)
 
