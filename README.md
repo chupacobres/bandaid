@@ -4,7 +4,7 @@ In the project directory, you can run:
 
 ![](client/src/assets/screenshots/landing.png)
 
-![](assets/screenshots/add.png)
+![](client/src/assets/screenshots/add.png)
 
-![](assets/screenshots/edit.png)
+![](client/src/assets/screenshots/edit.png)
 
